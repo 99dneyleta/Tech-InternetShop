@@ -1,0 +1,239 @@
+*{
+    font-family: 'Agency FB', arial;
+    color: #565656;
+}
+a{
+    color: #565656;
+}
+a:hover{
+    color: #808080;
+    text-decoration: none;
+}
+
+#header{
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.header{
+    padding: 0.7% 0;
+}
+
+.logo{
+    font-size: 190%;
+    font-weight: 600;
+    width: 6%;
+    display: inline-block;
+}
+
+span.logo{
+    vertical-align: middle;
+}
+
+.headerMenu{
+    padding: 0.5%;
+}
+
+.nav-link{
+    font-size: 120%;
+    padding: 1% 1rem;
+}
+
+input[type="text"]:focus{
+    border-color: #565656;
+}
+
+input[type="text"]{
+    border-color: #a9a9a9;
+}
+
+.form-control{
+    height: 75%;
+    width: 100% !important;
+}
+
+
+.form-inline{
+    width: 200px !important;
+    float: right;
+    clear: both;
+}
+
+.welcome{
+    /*margin-top: 60px;*/
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+hr{
+    background-color: #565656;
+    color: #565656;
+    margin: 0 auto 0 auto;
+    border-width: 2px;
+}
+
+.arrow-down {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #565656;
+}
+
+.category{
+    margin: 40px auto 0 auto;
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ececec;
+    background-color: white;
+    padding: 10% 5%;
+}
+
+.img_categ{
+    display: inline-block;
+    width: 100%;
+}
+
+#content{
+    padding-top: 60px;
+    margin-top: 0;
+    background-color: white;
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.name_category{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+.name_slids{
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+
+/**/
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+.col-item
+{
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    background: #FFF;
+}
+.col-item .photo img
+{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.col-item .info
+{
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1px;
+}
+
+.col-item:hover .info {
+    background-color: #F5F5DC;
+}
+.col-item .price
+{
+    /*width: 50%;*/
+    float: left;
+    margin-top: 5px;
+}
+
+.col-item .price h5
+{
+    line-height: 20px;
+    margin: 0;
+}
+
+.price-text-color
+{
+    color: #219FD1;
+}
+
+.col-item .info .rating
+{
+    color: #777;
+}
+
+.col-item .rating
+{
+    /*width: 50%;*/
+    float: left;
+    font-size: 17px;
+    text-align: right;
+    line-height: 52px;
+    margin-bottom: 10px;
+    height: 52px;
+}
+
+.col-item .separator
+{
+    border-top: 1px solid #E1E1E1;
+}
+
+.clear-left
+{
+    clear: left;
+}
+
+.col-item .separator p
+{
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.col-item .separator p i
+{
+    margin-right: 5px;
+}
+.col-item .btn-add
+{
+    width: 50%;
+    float: left;
+}
+
+.col-item .btn-add
+{
+    border-right: 1px solid #E1E1E1;
+}
+
+.col-item .btn-details
+{
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+.controls
+{
+    margin-top: 20px;
+}
+[data-slide="prev"]
+{
+    margin-right: 10px;
+}
+
+#content .carousel{
+    margin-top: 10px;
+}
