@@ -14,9 +14,196 @@
     <section id="header">
         <div class="container header">
             <div class="row">
-                <div class="col-sm-10">
+                <div class="col-sm-8">
                     <img src="../img/logo.png" alt="logo" class="logo">
                     <span class="logo">VapeON</span>
+                </div>
+                <div class="col-md-2 selfliquid-block">
+                    <a href="#" data-toggle="modal" data-target="#selfliquid-modal"><img src="../img/e-liquidbottle-512.png" alt="selfLiquid"></a>
+                    <div class="modal fade" id="selfliquid-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-container selfliquid-container">
+                                <div class="container">
+                                    <div class="panel-heading">
+                                        <h1 class="modal-title">Make e-liquid yourself</h1>
+                                        <hr>
+                                        <div class="arrow-down"></div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <h4>Size</h4>
+                                        <div class="row">
+                                            <div class="col-md-4 funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="size" id="30ml" checked/>
+                                                    <label for="30ml">30ml</label>
+                                                </div>
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="size" id="100ml"/>
+                                                    <label for="100ml">100ml</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="size" id="50ml"/>
+                                                    <label for="50ml">50ml</label>
+                                                </div>
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="size" id="150ml"/>
+                                                    <label for="150ml">150ml</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="size" id="70ml"/>
+                                                    <label for="70ml">70ml</label>
+                                                </div>
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="size" id="200ml"/>
+                                                    <label for="200ml">200ml</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4>PG/VG</h4>
+                                        <div class="row">
+                                            <div class="col-md-6 funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="pg/vg" id="50/50" checked/>
+                                                    <label for="50/50">50/50</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6  funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="pg/vg" id="70/30"/>
+                                                    <label for="70/30">70/30</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4>Flavor</h4>
+                                        <h5>Tobacco</h5>
+                                        <div class="row">
+                                            <div class="col-md-6 funkyradio">
+                                                <div class="funkyradio-tobacco">
+                                                    <input type="checkbox" name="flavor" id="Arabic"/>
+                                                    <label for="Arabic">Arabic</label>
+                                                </div>
+                                                <div class="funkyradio-tobacco">
+                                                    <input type="checkbox" name="flavor" id="BlackHoney"/>
+                                                    <label for="BlackHoney">Black Honey</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 funkyradio">
+                                                <div class="funkyradio-tobacco">
+                                                    <input type="checkbox" name="flavor" id="CubanoType"/>
+                                                    <label for="CubanoType">Cubano Type</label>
+                                                </div>
+                                                <div class="funkyradio-tobacco">
+                                                    <input type="checkbox" name="flavor" id="BlackCherry"/>
+                                                    <label for="BlackCherry">Black Cherry</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>Fruit</h5>
+                                        <div class="row">
+                                            <div class="col-md-6 funkyradio">
+                                                <div class="funkyradio-fruit">
+                                                    <input type="checkbox" name="flavor" id="Acai"/>
+                                                    <label for="Acai">Acai</label>
+                                                </div>
+                                                <div class="funkyradio-fruit">
+                                                    <input type="checkbox" name="flavor" id="Apricot"/>
+                                                    <label for="Apricot">Apricot</label>
+                                                </div>
+                                                <div class="funkyradio-fruit">
+                                                    <input type="checkbox" name="flavor" id="BerryMix"/>
+                                                    <label for="BerryMix">Berry Mix</label>
+                                                </div>
+                                                <div class="funkyradio-fruit">
+                                                    <input type="checkbox" name="flavor" id="Coconut"/>
+                                                    <label for="Coconut">Coconut</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 funkyradio">
+                                                <div class="funkyradio-fruit">
+                                                    <input type="checkbox" name="flavor" id="Apple"/>
+                                                    <label for="Apple">Apple</label>
+                                                </div>
+                                                <div class="funkyradio-fruit">
+                                                    <input type="checkbox" name="flavor" id="Banana"/>
+                                                    <label for="Banana">Banana</label>
+                                                </div>
+                                                <div class="funkyradio-fruit">
+                                                    <input type="checkbox" name="flavor" id="Cantaloupe"/>
+                                                    <label for="Cantaloupe">Cantaloupe</label>
+                                                </div>
+                                                <div class="funkyradio-fruit">
+                                                    <input type="checkbox" name="flavor" id="Dragonfriut"/>
+                                                    <label for="Dragonfriut">Dragonfriut</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5>Bake/Sweet</h5>
+                                        <div class="row">
+                                            <div class="col-md-6 funkyradio">
+                                                <div class="funkyradio-bake">
+                                                    <input type="checkbox" name="flavor" id="BananaCream"/>
+                                                    <label for="BananaCream">Banana Cream</label>
+                                                </div>
+                                                <div class="funkyradio-bake">
+                                                    <input type="checkbox" name="flavor" id="BerryCereal"/>
+                                                    <label for="BerryCereal">Berry Cereal</label>
+                                                </div>
+                                                <div class="funkyradio-bake">
+                                                    <input type="checkbox" name="flavor" id="Bubblegum"/>
+                                                    <label for="Bubblegum">Bubblegum</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 funkyradio">
+                                                <div class="funkyradio-bake">
+                                                    <input type="checkbox" name="flavor" id="BavarianCream"/>
+                                                    <label for="BavarianCream">Bavarian Cream</label>
+                                                </div>
+                                                <div class="funkyradio-bake">
+                                                    <input type="checkbox" name="flavor" id="BrownSugar"/>
+                                                    <label for="BrownSugar">Brown Sugar</label>
+                                                </div>
+                                                <div class="funkyradio-bake">
+                                                    <input type="checkbox" name="flavor" id="Caramel"/>
+                                                    <label for="Caramel">Caramel</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4>Nicotine</h4>
+                                        <div class="row">
+                                            <div class="col-md-3 funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="nicotine" id="0"/>
+                                                    <label for="0">0</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="nicotine" id="1"/>
+                                                    <label for="1">1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="nicotine" id="3"/>
+                                                    <label for="3">3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 funkyradio">
+                                                <div class="funkyradio-default">
+                                                    <input type="radio" name="nicotine" id="6"/>
+                                                    <label for="6">6</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-1">
                     <a href=""><img src="../img/cart.png" alt="cart" class="cart"></a>
@@ -25,7 +212,7 @@
                     <a href="#" data-toggle="modal" data-target="#login-modal"><img src="../img/user.png" alt="person" class="person"></a>
                     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                         <div class="modal-dialog">
-                            <div class="loginmodal-container">
+                            <div class="modal-container">
                                 <div class="container">
                                     <div class="row">
                                         <div class="panel panel-login">
