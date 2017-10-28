@@ -47,7 +47,7 @@ span.logo{
     vertical-align: middle;
 }
 
-.loginmodal-container {
+.modal-container {
     padding: 30px;
     max-width: 350px;
     width: 100% !important;
@@ -58,24 +58,24 @@ span.logo{
     overflow: hidden;
 }
 
-.loginmodal-container h1 {
+.modal-container h1 {
     text-align: center;
     font-size: 1.8em;
     margin-bottom: 2%;
 }
 
-.loginmodal-container input[type=submit] {
+.modal-container input[type=submit] {
     width: 100%;
     display: block;
     margin-bottom: 10px;
     position: relative;
 }
 
-.loginmodal-container input[type=text]{
+.modal-container input[type=text]{
     margin-top: 5%;
 }
 
-.loginmodal-container input[type=text], input[type=password] {
+.modal-container input[type=text], input[type=password] {
     height: 44px;
     font-size: 16px;
     width: 100%;
@@ -89,7 +89,7 @@ span.logo{
     -moz-box-sizing: border-box;
 }
 
-.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+.modal-container input[type=text]:hover, input[type=password]:hover {
     border: 1px solid #b9b9b9;
     border-top: 1px solid #a0a0a0;
     -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
@@ -415,7 +415,7 @@ span.price-text-color{
 }
 .panel-login>.panel-heading hr{
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     clear: both;
     border: 0;
     height: 1px;
@@ -565,5 +565,114 @@ a.socialIcon:hover, .socialHoverClass {
     transition: all 0.8s;
 }
 
+.selfliquid-block a{
+    display: inline-block;
+    opacity: 0.8;
+}
+
+
+.selfliquid-block a img{
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.selfliquid-block a:hover{
+    opacity: 1;
+}
+
+.selfliquid-container{
+    max-width: 750px;
+    width: 100% !important;
+}
+
+.funkyradio label {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4;
+    font-weight: normal;
+}
+
+.funkyradio input[type="radio"]:empty,
+.funkyradio input[type="checkbox"]:empty {
+    display: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label,
+.funkyradio input[type="checkbox"]:empty ~ label {
+    position: relative;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    margin-top: 0.8em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label:before,
+.funkyradio input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: #888;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #C2C2C2;
+}
+
+.funkyradio input[type="radio"]:checked ~ label,
+.funkyradio input[type="checkbox"]:checked ~ label {
+    color: #777;
+}
+
+.funkyradio input[type="radio"]:checked ~ label:before,
+.funkyradio input[type="checkbox"]:checked ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #333;
+    background-color: #ccc;
+}
+
+.funkyradio input[type="radio"]:focus ~ label:before,
+.funkyradio input[type="checkbox"]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+
+.funkyradio-default input[type="radio"]:checked ~ label:before{
+    color: #333;
+    background-color: #a8a8a8;
+}
+
+.funkyradio-tobacco input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #994d14;
+}
+
+.funkyradio-fruit input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #29c434;
+}
+
+.funkyradio-bake input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: rgba(233, 207, 143, 0.82);
+}
 
 
