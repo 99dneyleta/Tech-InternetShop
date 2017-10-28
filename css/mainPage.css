@@ -468,7 +468,7 @@ span.price-text-color{
     color: #666;
 }
 
-.btn-register {
+.btn-register, .btn-selfliquid-add-to-cart, .btn-selfliquid-buy {
     background-color: #565656;
     outline: none;
     color: #fff;
@@ -480,8 +480,9 @@ span.price-text-color{
     text-transform: uppercase;
     border-color: #565656;
 }
-.btn-register:hover,
-.btn-register:focus {
+.btn-register:hover, .btn-register:focus,
+.btn-selfliquid-add-to-cart:hover, .btn-selfliquid-add-to-cart:focus,
+.btn-selfliquid-buy:hover, .btn-selfliquid-buy:focus{
     color: #fff;
     background-color: #363636;
     border-color: #363636;
@@ -673,6 +674,26 @@ a.socialIcon:hover, .socialHoverClass {
 .funkyradio-bake input[type="checkbox"]:checked ~ label:before {
     color: #fff;
     background-color: rgba(233, 207, 143, 0.82);
+}
+
+h4.nameOfFilter{
+    font-weight: bold;
+}
+
+.funkyradio .funkyradio-default:last-child,
+.funkyradio .funkyradio-bake:last-child{
+    margin-bottom: 20%;
+}
+
+.funkyradio .funkyradio-tobacco:last-child,
+.funkyradio .funkyradio-fruit:last-child{
+    margin-bottom: 10%;
+}
+
+.totalcost{
+    position: absolute;
+    right: 0;
+    top: 25%;
 }
 
 
