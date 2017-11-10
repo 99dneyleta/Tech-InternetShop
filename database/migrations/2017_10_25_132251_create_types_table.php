@@ -14,7 +14,7 @@ class CreateTypesTable extends Migration
     public function up()
     {
         Schema::create('types', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
             $table->text('type');
             $table->text('productType');
         });

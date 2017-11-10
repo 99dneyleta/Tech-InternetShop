@@ -14,7 +14,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
             $table->integer('brandID')->unsigned();
             $table->foreign('brandID')->references('id')->on('brands');
             $table->text('model');
@@ -27,14 +27,12 @@ class CreateProductsTable extends Migration
             $table->integer('quantity');
             $table->text('description');
             $table->text('photo');
-            $table->integer('productType');
             $table->integer('typeID')->unsigned();
             $table->foreign('typeID')->references('id')->on('types');
-            $table->integer('power')->nullable()->default(NULL);
-            $table->integer('capacity')->nullable()->default(NULL);
-            $table->float('volume')->nullable()->default(NULL);
-            $table->integer('crutchsQuantity')->nullable()->default(NULL);
-
+            $table->integer('power')->nullable();
+            $table->integer('capacity')->nullable();
+            $table->float('volume')->nullable();
+            $table->integer('crutchsQuantity')->nullable();
         });
     }
 
