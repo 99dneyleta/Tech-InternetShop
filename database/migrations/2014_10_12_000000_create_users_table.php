@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('listOfOrders')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->timestamps();
         });
     }
 
