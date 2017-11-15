@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'PagesController@main');
+Route::get('testAdd', 'PagesController@testadd');
 
 Auth::routes();
 
