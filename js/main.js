@@ -26,6 +26,39 @@ $(function() {
 
 $(document).ready(function(){
     $flag=1;
+    $("#username").focusout(function(){
+        if($(this).val()===''){
+            $(this).css("border-color", "#FF0000");
+            $('#login-submit').attr('disabled',true);
+            $('#login-submit').css('color',"#565656");
+            $("#error_logname").text("* You have to enter your name!");
+        }
+        else
+        {
+            $(this).css("border-color", "#2eb82e");
+            $('#login-submit').attr('disabled',false);
+            $('#login-submit').css('color',"white");
+            $("#error_logname").text("");
+
+        }
+    });
+    $("#password").focusout(function(){
+        if($(this).val()===''){
+            $(this).css("border-color", "#FF0000");
+            $('#login-submit').attr('disabled',true);
+            $('#login-submit').css('color',"#565656");
+            $("#error_logpass").text("* You have to enter your password!");
+        }
+        else
+        {
+            $(this).css("border-color", "#2eb82e");
+            $('#login-submit').attr('disabled',false);
+            $('#login-submit').css('color',"white");
+            $("#error_logpass").text("");
+
+        }
+    });
+
     $("#username-reg").focusout(function(){
         if($(this).val()===''){
             $(this).css("border-color", "#FF0000");
@@ -59,13 +92,19 @@ $(document).ready(function(){
         }
     });
     $("#email").focusout(function(){
+        var r = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
         if($(this).val()===''){
             $(this).css("border-color", "#FF0000");
             $('#register-submit').attr('disabled',true);
             $('#register-submit').css('color',"#565656");
             $("#error_mail").text("* You have to enter your mail!");
         }
-
+        else if (!r.test($(this).val())) {
+            $(this).css("border-color", "#FF0000");
+            $('#register-submit').attr('disabled',true);
+            $('#register-submit').css('color',"#565656");
+            $("#error_mail").text("* Enter valid mail!");
+        }
         else
         {
             $(this).css("border-color", "#2eb82e");
@@ -73,6 +112,9 @@ $(document).ready(function(){
             $('#register-submit').css('color',"white");
             $("#error_mail").text("");
         }
+
+
+
     });
     $("#confirm-password").focusout(function(){
         if($(this).val()===''){
@@ -85,7 +127,7 @@ $(document).ready(function(){
         {
             $(this).css("border-color", "#FF0000");
             $('#register-submit').attr('disabled',true);
-            $("#error_confpass").text("* Error");
+            $("#error_confpass").text("* Passwords do not match");
         }
         else
         {
@@ -159,6 +201,20 @@ $(document).ready(function(){
             $('#register-submit').attr('disabled',true);
             $('#register-submit').css('color',"#565656");
             $("#error_confpass").text("* Confirm your Password!");
+        }
+        if($("#password").val()==='')
+        {
+            $("#password").css("border-color", "#FF0000");
+            $('#login-submit').attr('disabled',true);
+            $('#login-submit').css('color',"#565656");
+            $("#error_logpass").text("* You have to enter your Password!");
+        }
+        if($("#username").val()==='')
+        {
+            $("#username").css("border-color", "#FF0000");
+            $('#login-submit').css('color',"#565656");
+            $('#login-submit').attr('disabled',true);
+            $("#error_logname").text("* You have to enter your name!");
         }
     });
 });
