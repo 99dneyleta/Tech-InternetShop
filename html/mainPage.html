@@ -244,10 +244,10 @@
                                                     <div class="col-lg-12">
                                                         <form id="login-form"  method="post" role="form" style="display: block;">
                                                             <div class="form-group">
-                                                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="User name" value="" required>
                                                             </div>
                                                             <div class="form-group">
-                                                                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                                                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
                                                             </div>
                                                             <div class="form-group">
                                                                 <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
@@ -264,16 +264,24 @@
                                                         </form>
                                                         <form id="register-form" action="" method="post" role="form" style="display: none;">
                                                             <div class="form-group">
-                                                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                                                <input type="text" name="username" id="username-reg" tabindex="1" class="form-control" placeholder="User name" value="" required>
+                                                                <span id="error_name" class="text-danger"></span>
                                                             </div>
                                                             <div class="form-group">
-                                                                <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                                                                <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
+                                                                <span id="error_mail" class="text-danger"></span>
                                                             </div>
                                                             <div class="form-group">
-                                                                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                                                <input type="text" name="tel" id="tel" tabindex="1" class="form-control" placeholder="Phone Number" value="" required>
+                                                                <span id="error_phone" class="text-danger"></span>
                                                             </div>
                                                             <div class="form-group">
-                                                                <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                                                                <input type="password" name="password" id="password-reg" tabindex="2" class="form-control" placeholder="Password" required>
+                                                                <span id="error_pass" class="text-danger"></span>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required>
+                                                                <span id="error_confpass" class="text-danger"></span>
                                                             </div>
                                                             <div class="form-group">
                                                                 <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">

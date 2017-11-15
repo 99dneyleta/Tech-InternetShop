@@ -696,4 +696,27 @@ h4.nameOfFilter{
     top: 25%;
 }
 
+ul.breadcrumb {
+    padding: 6px 16px;
+    list-style: none;
+    background-color: #f4f4f4;
+    border: 1px solid #c7c7c7;
+    margin-bottom: 5%;
+}
+
+ul.breadcrumb li {
+    display: inline;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #565656;
+    content: "/\00a0";
+}
+
+ul.breadcrumb img{
+    width: 1.5%;
+    margin-bottom: 0.3%;
+}
+
 
