@@ -352,7 +352,7 @@
     <section id="content">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="#"><img src="../../img/home.png" alt="home"></a></li>
+                <li><a href="mainPage.html"><img src="../../img/home.png" alt="home"></a></li>
                 <li class="active">Profile</li>
             </ul>
             <div class="row">
@@ -364,10 +364,10 @@
                     <ul class="nav nav-tabs">
                         <div class="row">
                             <div class="col-sm-4">
-                                <li class="active"><a data-toggle="tab" href="#orders-tab">Orders</a></li>
+                                <li><a data-toggle="tab" href="#orders-tab">Orders</a></li>
                             </div>
                             <div class="col-sm-4">
-                                <li><a data-toggle="tab" href="#selfInf-tab">Self information</a></li>
+                                <li class="active"><a data-toggle="tab" href="#selfInf-tab">Self information</a></li>
                             </div>
                             <div class="col-sm-4">
                                 <li><a data-toggle="tab" href="#address-tab">Address</a></li>
@@ -377,7 +377,7 @@
                     <hr>
                     <div class="arrow-down"></div>
                     <div class="tab-content">
-                        <div id="orders-tab" class="tab-pane fade in active">
+                        <div id="orders-tab" class="tab-pane">
                             <table class="ordersTable table">
                                 <tr class="headerTable">
                                     <th>Order number</th>
@@ -415,7 +415,7 @@
                                 </tr>
                             </table>
                         </div>
-                        <div id="selfInf-tab" class="tab-pane fade">
+                        <div id="selfInf-tab" class="tab-pane active">
                             <form action="">
                                 <div class="form-group">
                                     <label for="name">Name</label>
@@ -437,6 +437,22 @@
                                     <input type="text" id="phone" class="form-control" value="0508888888">
                                     <span id="errorPhone" class="text-danger"></span>
                                 </div>
+                                <label for="photo">Your photo</label>
+                                <div class="input-group image-preview">
+
+                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                                    <span class="input-group-btn">
+                                        <!-- image-preview-clear button -->
+                                        <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                            <span class="glyphicon glyphicon-remove"></span> Clear
+                                        </button>
+                                        <!-- image-preview-input -->
+                                        <div class="btn btn-default image-preview-input">
+                                            <span class="image-preview-input-title">Browse</span>
+                                            <input id="photo" type="file" accept="image/png, image/jpeg, image/jpg" name="input-file-preview"/>
+                                        </div>
+                                    </span>
+                                </div>
                                 <h4><b>Change your password</b></h4>
                                 <div class="form-group">
                                     <label for="oldPass">Old password</label>
@@ -456,17 +472,17 @@
                                 <input type="submit" name="selfInf-submit" class="btn btn-saveSelfInf" id="selfInf-submit" value="Save">
                             </form>
                         </div>
-                        <div id="address-tab" class="tab-pane fade">
+                        <div id="address-tab" class="tab-pane">
                             <form action="">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="country">Country</label>
-                                            <input type="text" id="country" class="form-control">
+                                            <input type="text" id="country" class="form-control" value="Ukraine">
                                         </div>
                                         <div class="form-group">
                                             <label for="street">Street</label>
-                                            <input type="text" id="street" class="form-control">
+                                            <input type="text" id="street" class="form-control" value="Holovna">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -502,7 +518,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
