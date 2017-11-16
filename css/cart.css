@@ -1,0 +1,36 @@
+tr td:first-child{
+    width: 8%;
+}
+
+td.img{
+    width: 15%;
+}
+
+td.itemInf{
+    width: 35%;
+}
+
+td.cost, td.totalCost{
+    width: 12%;
+}
+
+.delete img{
+    margin-left: 25%;
+    margin-top: 85%;
+}
+
+.itemImg{
+    width: 100%;
+    display: inline-block;
+    border: 2px solid #cccccc;
+}
+
+.nameOfItem{
+    display: inline-block;
+}
+
+.quantity .input-group{
+    width: 80%;
+}
+
+
