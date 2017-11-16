@@ -148,11 +148,14 @@ input[type="text"]{
     border-color: #a9a9a9;
 }
 
+.search img{
+    width: 100%;
+}
+
 .form-control{
     height: 75%;
     width: 100% !important;
 }
-
 
 .form-inline{
     width: 200px !important;
