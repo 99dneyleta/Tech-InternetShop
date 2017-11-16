@@ -23,6 +23,7 @@
 
 .nav-tabs li{
     text-align: center;
+    font-size: 120%;
 }
 
 .nav-tabs li a.active{
@@ -46,6 +47,13 @@ ul.itemsList{
 }
 
 td.status{
-    color: #d39f14;
     font-weight: bold;
+}
+
+.btn-saveSelfInf, .btn-addr{
+    background-color: #565656;
+    color: white;
+    width: 20%;
+    float: right;
+    text-transform: uppercase;
 }

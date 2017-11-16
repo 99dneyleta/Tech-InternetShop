@@ -17,22 +17,30 @@ $(document).ready(function(){
 
         }
     });
-    // $("#password").focusout(function(){
-    //     if($(this).val()===''){
-    //         $(this).css("border-color", "#FF0000");
-    //         $('#login-submit').attr('disabled',true);
-    //         $('#login-submit').css('color',"#565656");
-    //         $("#error_logpass").text("* You have to enter your password!");
-    //     }
-    //     else
-    //     {
-    //         $(this).css("border-color", "#2eb82e");
-    //         $('#login-submit').attr('disabled',false);
-    //         $('#login-submit').css('color',"white");
-    //         $("#error_logpass").text("");
-    //
-    //     }
-    // });
+    $("#oldPass").focusout(function(){
+        if($(this).val()===''){
+            $(this).css("border-color", "inherit");
+            $('#selfInf-submit').attr('disabled',false);
+            $('#selfInf-submit').css('color',"white");
+            $("#errorOldPass").text("");
+        }
+    });
+    $("#newPass").focusout(function(){
+        if($(this).val()===''){
+            $(this).css("border-color", "#inherit");
+            $('#selfInf-submit').attr('disabled',false);
+            $('#selfInf-submit').css('color',"white");
+            $("#errorNewPass").text("");
+        }
+    });
+    $("#confPass").focusout(function(){
+        if($(this).val()===''){
+            $(this).css("border-color", "#inherit");
+            $('#selfInf-submit').attr('disabled',false);
+            $('#selfInf-submit').css('color',"white");
+            $("#errorConfPass").text("");
+        }
+    });
     $("#mail").focusout(function(){
         var r = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
         if($(this).val()===''){
@@ -55,27 +63,6 @@ $(document).ready(function(){
             $("#errorMail").text("");
         }
     });
-    // $("#confirm-password").focusout(function(){
-    //     if($(this).val()===''){
-    //         $(this).css("border-color", "#FF0000");
-    //         $('#register-submit').attr('disabled',true);
-    //         $('#register-submit').css('color',"#565656");
-    //         $("#error_confpass").text("* Confirm your password!");
-    //     }
-    //     else if ($(this).val()!==$pass)
-    //     {
-    //         $(this).css("border-color", "#FF0000");
-    //         $('#register-submit').attr('disabled',true);
-    //         $("#error_confpass").text("* Passwords do not match");
-    //     }
-    //     else
-    //     {
-    //         $(this).css("border-color", "#2eb82e");
-    //         $('#register-submit').attr('disabled',false);
-    //         $('#register-submit').css('color',"white");
-    //         $("#error_confpass").text("");
-    //     }
-    // });
     $("#phone").focusout(function(){
         $pho =$("#phone").val();
         if($(this).val()===''){
@@ -105,7 +92,23 @@ $(document).ready(function(){
             $("#errorPhone").text("");
         }
     });
-    $( "#submit" ).click(function() {
+    $pass = $("#newPass").val();
+    $("#confirm-password").focusout(function(){
+        if ($(this).val()!==$pass)
+        {
+            $(this).css("border-color", "#FF0000");
+            $('#register-submit').attr('disabled',true);
+            $("#error_confpass").text("* Passwords do not match");
+        }
+        else
+        {
+            $(this).css("border-color", "#2eb82e");
+            $('#register-submit').attr('disabled',false);
+            $('#register-submit').css('color',"white");
+            $("#error_confpass").text("");
+        }
+    });
+    $("#selfInf-submit").click(function() {
         if($("#name").val()==='')
         {
             $("#name").css("border-color", "#FF0000");
@@ -127,20 +130,48 @@ $(document).ready(function(){
             $('#selfInf-submit').css('color',"#565656");
             $("#errorMail").text("* You have to enter your mail!");
         }
-        // if($("#confirm-password").val()==='')
-        // {
-        //     $("#confirm-password").css("border-color", "#FF0000");
-        //     $('#register-submit').attr('disabled',true);
-        //     $('#register-submit').css('color',"#565656");
-        //     $("#error_confpass").text("* Confirm your Password!");
-        // }
-        // if($("#password").val()==='')
-        // {
-        //     $("#password").css("border-color", "#FF0000");
-        //     $('#login-submit').attr('disabled',true);
-        //     $('#login-submit').css('color',"#565656");
-        //     $("#error_logpass").text("* You have to enter your Password!");
-        // }
+        if($("#oldPass").val()!=='' && $("#newPass").val()==='' && $("#confPass").val()===''){
+            $("#newPass").css("border-color", "#FF0000");
+            $("#confPass").css("border-color", "#FF0000");
+            $('#selfInf-submit').attr('disabled',true);
+            $('#selfInf-submit').css('color',"#565656");
+            $("#errorNewPass").text("*If you want to change your password, you have to enter new password!");
+            $("#errorConfPass").text("*If you want to change your password, you have to confirm your new password!");
+        }
+        if($("#oldPass").val()==='' && $("#newPass").val()!=='' && $("#confPass").val()===''){
+            $("#oldPass").css("border-color", "#FF0000");
+            $("#confPass").css("border-color", "#FF0000");
+            $('#selfInf-submit').attr('disabled',true);
+            $('#selfInf-submit').css('color',"#565656");
+            $("#errorOldPass").text("*If you want to change your password, you have to enter old password!");
+            $("#errorConfPass").text("*If you want to change your password, you have to confirm your new password!");
+        }
+        if($("#oldPass").val()==='' && $("#newPass").val()==='' && $("#confPass").val()!==''){
+            $("#newPass").css("border-color", "#FF0000");
+            $("#oldPass").css("border-color", "#FF0000");
+            $('#selfInf-submit').attr('disabled',true);
+            $('#selfInf-submit').css('color',"#565656");
+            $("#errorNewPass").text("*If you want to change your password, you have to enter new password!");
+            $("#errorOldPass").text("*If you want to change your password, you have to enter old password!");
+        }
+        if($("#oldPass").val()!=='' && $("#newPass").val()!=='' && $("#confPass").val()===''){
+            $("#confPass").css("border-color", "#FF0000");
+            $('#selfInf-submit').attr('disabled',true);
+            $('#selfInf-submit').css('color',"#565656");
+            $("#errorConfPass").text("*If you want to change your password, you have to confirm your new password!");
+        }
+        if($("#oldPass").val()!=='' && $("#newPass").val()==='' && $("#confPass").val()!==''){
+            $("#newPass").css("border-color", "#FF0000");
+            $('#selfInf-submit').attr('disabled',true);
+            $('#selfInf-submit').css('color',"#565656");
+            $("#errorNewPass").text("*If you want to change your password, you have to enter new password!");
+        }
+        if($("#oldPass").val()==='' && $("#newPass").val()!=='' && $("#confPass").val()!==''){
+            $("#oldPass").css("border-color", "#FF0000");
+            $('#selfInf-submit').attr('disabled',true);
+            $('#selfInf-submit').css('color',"#565656");
+            $("#errorOldPass").text("*If you want to change your password, you have to enter old password!");
+        }
     });
 });
 
