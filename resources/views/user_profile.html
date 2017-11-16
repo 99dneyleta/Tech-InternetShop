@@ -411,7 +411,7 @@
                                         </ul>
                                     </td>
                                     <td class="totalPrice"><b>$165.55</b></td>
-                                    <td class="status">Processed</td>
+                                    <td class="status">Sent</td>
                                 </tr>
                             </table>
                         </div>
@@ -420,25 +420,84 @@
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="text" id="name" class="form-control" value="John Snow">
+                                    <span id="errorName" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="mail">Email</label>
                                     <input type="text" id="mail" class="form-control" value="johnSnow@gmail.com">
+                                    <span id="errorMail" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="dateOfBirth">Date of Birth</label>
                                     <input type="date" id="dateOfBirth" class="form-control" value="1997-10-24">
+                                    <span id="errorDoB" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label for="tel">Phone number</label>
-                                    <input type="text" id="tel" class="form-control" value="0508888888">
-                                    <span id="error_phone" class="text-danger"></span>
+                                    <label for="phone">Phone number</label>
+                                    <input type="text" id="phone" class="form-control" value="0508888888">
+                                    <span id="errorPhone" class="text-danger"></span>
                                 </div>
+                                <h4><b>Change your password</b></h4>
+                                <div class="form-group">
+                                    <label for="oldPass">Old password</label>
+                                    <input type="password" id="oldPass" class="form-control">
+                                    <span id="errorOldPass" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPass">New password</label>
+                                    <input type="password" id="newPass" class="form-control">
+                                    <span id="errorNewPass" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confPass">Confirm password</label>
+                                    <input type="password" id="confPass" class="form-control">
+                                    <span id="errorConfPass" class="text-danger"></span>
+                                </div>
+                                <input type="submit" name="selfInf-submit" class="btn btn-saveSelfInf" id="selfInf-submit" value="Save">
                             </form>
                         </div>
                         <div id="address-tab" class="tab-pane fade">
-                            <h3>Menu 2</h3>
-                            <p>Some content in menu 2.</p>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="country">Country</label>
+                                            <input type="text" id="country" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="street">Street</label>
+                                            <input type="text" id="street" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="city">City</label>
+                                            <input type="text" id="city" class="form-control">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="number">Number</label>
+                                                    <input type="text" id="number" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="flat">Flat</label>
+                                                    <input type="text" id="flat" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="zip">ZIP</label>
+                                                    <input type="text" id="zip" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" name="addr-submit" class="btn btn-addr" id="addr-submit" value="Save">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -480,5 +539,6 @@
     <script src="https://unpkg.com/popper.js"></script>
     <script src="../../js/bootstrap.js"></script>
     <script src="../../js/main.js"></script>
+    <script src="../../js/user_profile.js"></script>
 </body>
 </html>

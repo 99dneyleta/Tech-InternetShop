@@ -112,9 +112,6 @@ $(document).ready(function(){
             $('#register-submit').css('color',"white");
             $("#error_mail").text("");
         }
-
-
-
     });
     $("#confirm-password").focusout(function(){
         if($(this).val()===''){
