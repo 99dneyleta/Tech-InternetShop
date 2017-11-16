@@ -358,17 +358,18 @@
             <div class="row">
                 <div class="col-md-3">
                     <img src="../img/default-user.png" class="userPhoto" alt="userPhoto">
+                    <h2 class="mainUserName">John Snow</h2>
                 </div>
                 <div class="col-md-9">
                     <ul class="nav nav-tabs">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <li class="active"><a data-toggle="tab" href="#orders-tab">Orders</a></li>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <li><a data-toggle="tab" href="#selfInf-tab">Self information</a></li>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <li><a data-toggle="tab" href="#address-tab">Address</a></li>
                             </div>
                         </div>
@@ -377,12 +378,63 @@
                     <div class="arrow-down"></div>
                     <div class="tab-content">
                         <div id="orders-tab" class="tab-pane fade in active">
-                            <h3>HOME</h3>
-                            <p>Some content.</p>
+                            <table class="ordersTable table">
+                                <tr class="headerTable">
+                                    <th>Order number</th>
+                                    <th>Items</th>
+                                    <th>Total price</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td class="orderNumber">12345</td>
+                                    <td>
+                                        <ul class="itemsList">
+                                            <li class="item">Wismec RX300 TC</li>
+                                            <li class="item">SMOK TFV8 Cloud Beast RTA</li>
+                                            <li class="item">SMOK V8-T6 0.20hm <b>x 2</b></li>
+                                            <li class="item">LG 18650 HG2 3000mAh 35A <b>x 4</b></li>
+                                            <li class="item">Coctail Cream Rafaello</li>
+                                        </ul>
+                                    </td>
+                                    <td class="totalPrice"><b>$165.55</b></td>
+                                    <td class="status">Processed</td>
+                                </tr>
+                                <tr>
+                                    <td class="orderNumber">12345</td>
+                                    <td>
+                                        <ul class="itemsList">
+                                            <li class="item">Wismec RX300 TC</li>
+                                            <li class="item">SMOK TFV8 Cloud Beast RTA</li>
+                                            <li class="item">SMOK V8-T6 0.20hm <b>x 2</b></li>
+                                            <li class="item">LG 18650 HG2 3000mAh 35A <b>x 4</b></li>
+                                            <li class="item">Coctail Cream Rafaello</li>
+                                        </ul>
+                                    </td>
+                                    <td class="totalPrice"><b>$165.55</b></td>
+                                    <td class="status">Processed</td>
+                                </tr>
+                            </table>
                         </div>
                         <div id="selfInf-tab" class="tab-pane fade">
-                            <h3>Menu 1</h3>
-                            <p>Some content in menu 1.</p>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" class="form-control" value="John Snow">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mail">Email</label>
+                                    <input type="text" id="mail" class="form-control" value="johnSnow@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateOfBirth">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" class="form-control" value="1997-10-24">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tel">Phone number</label>
+                                    <input type="text" id="tel" class="form-control" value="0508888888">
+                                    <span id="error_phone" class="text-danger"></span>
+                                </div>
+                            </form>
                         </div>
                         <div id="address-tab" class="tab-pane fade">
                             <h3>Menu 2</h3>

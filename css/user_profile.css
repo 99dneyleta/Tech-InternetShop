@@ -7,6 +7,12 @@
     border-radius: 50%;
 }
 
+.mainUserName{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 4%;
+}
+
 .nav-tabs .row{
     width: 100%;
 }
@@ -17,4 +23,29 @@
 
 .nav-tabs li{
     text-align: center;
+}
+
+.nav-tabs li a.active{
+    color: #999;
+}
+table.ordersTable{
+    width: 100%;
+    margin-top: 2%;
+}
+
+tr.headerTable{
+    background-color: #565656;
+}
+
+tr.headerTable th{
+    color: white;
+}
+
+ul.itemsList{
+    list-style: none;
+}
+
+td.status{
+    color: #d39f14;
+    font-weight: bold;
 }
