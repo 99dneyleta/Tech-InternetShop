@@ -33,4 +33,13 @@ td.cost, td.totalCost{
     width: 80%;
 }
 
+.totalPrice{
+    text-align: right;
+    font-weight: bold;
+}
+
+.btn-checkout{
+    margin-top: 2%;
+}
+
 

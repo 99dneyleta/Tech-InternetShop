@@ -390,13 +390,13 @@
                 <td class="quantity">
                     <div class="input-group">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                            <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
                                 -
                             </button>
                         </span>
-                        <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                        <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                            <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
                                 +
                             </button>
                         </span>
@@ -433,6 +433,16 @@
                 <td class="totalCost"><b>$43.30</b></td>
             </tr>
         </table>
+        <div class="row">
+            <div class="col-sm-9"></div>
+            <div class="col-sm-3">
+                <div class="totalPrice">
+                    <h5>Total price: $104.00</h5>
+                </div>
+                <input type="button" name="checkout" id="checkoutBtn" class="btn btn-checkout" value="Checkout">
+            </div>
+        </div>
+
     </div>
 </section>
 <section id="footer">
