@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>VapeOn cart</title>
+    <title>VapeON products</title>
     <link rel="stylesheet" href="../../css/bootstrap-grid.css">
     <link rel="stylesheet" href="../../css/bootstrap-reboot.css">
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link href="http://allfont.ru/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/mainPage.css">
-    <link rel="stylesheet" href="../../css/user_profile.css">
-    <link rel="stylesheet" href="../../css/cart.css">
+    <link rel="stylesheet" href="../../css/products.css">
 </head>
 <body>
 <section id="header">
@@ -368,81 +367,79 @@
     <div class="container">
         <ul class="breadcrumb">
             <li><a href="mainPage.html"><img src="../../img/home.png" alt="home"></a></li>
-            <li class="active">Cart</li>
+            <li class="active">Complete kits</li>
         </ul>
-        <table class="table cartTable">
-            <tr class="headerTable">
-                <th></th>
-                <th colspan="2">Item</th>
-                <th>Quantity</th>
-                <th>Cost</th>
-                <th>Total cost</th>
-            </tr>
-            <tr>
-                <td class="delete"><img src="../../img/round-delete-button.png" alt=""></td>
-                <td class="img">
-                    <img src="../../img/mods/wrx3001.jpg" class="itemImg" alt="">
-                </td>
-                <td class="itemInf">
-                    <h3 class="nameOfItem">Wismec RX300 TC</h3>
-                    <p class="special"><b>Color:</b> Silver</p>
-                </td>
-                <td class="quantity">
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
-                                -
-                            </button>
-                        </span>
-                        <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
-                                +
-                            </button>
-                        </span>
-                    </div>
-                </td>
-                <td class="cost">$60.70</td>
-                <td class="totalCost"><b>$60.70</b></td>
-            </tr>
-            <tr>
-                <td class="delete"><img src="../../img/round-delete-button.png" alt=""></td>
-                <td class="img">
-                    <img src="../../img/tanks/tfv81.jpg" class="itemImg" alt="">
-                </td>
-                <td class="itemInf">
-                    <h3 class="nameOfItem">SMOK TFV8 Cloud Beast RTA</h3>
-                    <p class="special"><b>Color:</b> Orange</p>
-                </td>
-                <td class="quantity">
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                                -
-                            </button>
-                        </span>
-                        <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                                +
-                            </button>
-                        </span>
-                    </div>
-                </td>
-                <td class="cost">$43.30</td>
-                <td class="totalCost"><b>$43.30</b></td>
-            </tr>
-        </table>
         <div class="row">
-            <div class="col-sm-9"></div>
-            <div class="col-sm-3">
-                <div class="totalPrice">
-                    <h5>Total price: $104.00</h5>
+            <div class="col-md-3">
+                <div class="filter">
+                    <h3 class="nameOfFilter">Brand</h3>
+                    <hr>
+                    <div class="arrow-down"></div>
+                    <form action="" class="brandForm">
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="brand" id="eleaf" ></span>
+                            <label for="eleaf">Eleaf (5)</label>
+                        </div>
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="brand" id="ijoy"></span>
+                            <label for="ijoy">IJOY (1)</label>
+                        </div>
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="brand" id="joyetech"></span>
+                            <label for="joyetech">Joyetech (1)</label>
+                        </div>
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="brand" id="kangerTech"></span>
+                            <label for="kangerTech">KangerTech (3)</label>
+                        </div>
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="brand" id="smok"></span>
+                            <label for="smok">SMOK (3)</label>
+                        </div>
+                    </form>
+                    <h3 class="nameOfFilter">Color</h3>
+                    <hr>
+                    <div class="arrow-down"></div>
+                    <form action="" class="brandForm">
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="color" id="black" ></span>
+                            <label for="black">Black (6)</label>
+                        </div>
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="color" id="blue"></span>
+                            <label for="blue">Blue (1)</label>
+                        </div>
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="color" id="red"></span>
+                            <label for="red">Red (1)</label>
+                        </div>
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="color" id="silver"></span>
+                            <label for="silver">Silver (1)</label>
+                        </div>
+                        <div class="form-group">
+                            <span class="checkbox"><input type="checkbox" name="color" id="white"></span>
+                            <label for="white">White (4)</label>
+                        </div>
+                    </form>
                 </div>
-                <input type="button" name="checkout" id="checkoutBtn" class="btn btn-checkout" value="Checkout">
+                <div class="filter">
+                    <h3 class="nameOfFilter"></h3>
+                </div>
+                <div class="filter">
+                    <h3 class="nameOfFilter"></h3>
+                </div>
+                <div class="filter">
+                    <h3 class="nameOfFilter"></h3>
+                </div>
+                <div class="filter">
+                    <h3 class="nameOfFilter"></h3>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h3 class="nameOfGalery"><b>Complete Kits</b></h3>
             </div>
         </div>
-
     </div>
 </section>
 <section id="footer">
@@ -478,6 +475,6 @@
 <script src="https://unpkg.com/popper.js"></script>
 <script src="../../js/bootstrap.js"></script>
 <script src="../../js/main.js"></script>
-<script src="../../js/cart.js"></script>
+<script src="../../js/products.js"></script>
 </body>
 </html>

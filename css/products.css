@@ -1,0 +1,24 @@
+.brandForm .form-group{
+    border-bottom: 1px solid #bbb;
+    margin: 2%;
+}
+
+.nameOfFilter{
+    text-align: center;
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #737373;
+}
+.checkbox input {
+    display: none;
+}
+
+.brandForm .form-group:last-child{
+    margin-bottom: 7%;
+}
