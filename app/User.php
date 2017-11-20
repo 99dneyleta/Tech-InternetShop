@@ -23,7 +23,8 @@ class User extends Authenticatable
         'city',
         'postNumber',
         'email',
-        'password'
+        'password',
+        'isAdmin'
     ];
 
     /**
@@ -32,7 +33,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'isAdmin'
     ];
     public $timestamps = false;
+
 }
