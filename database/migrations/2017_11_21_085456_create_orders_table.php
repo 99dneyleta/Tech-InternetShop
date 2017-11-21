@@ -17,10 +17,11 @@ class CreateOrdersTable extends Migration
             $table->increments('id')->unique();
             $table->string('listOfItems');
             $table->float('totalPrice');
-            $table->string('status');
+            $table->integer('status')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamp('order_date');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('status')->references('id')->on('statuses');
         });
     }
 
