@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'PagesController@main');
+Route::get('admin\Users', 'AdminPagesController@DisplayUsers');
 
 Auth::routes();
 
