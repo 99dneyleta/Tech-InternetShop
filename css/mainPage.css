@@ -471,7 +471,7 @@ span.price-text-color{
     color: #666;
 }
 
-.btn-register, .btn-selfliquid-add-to-cart, .btn-selfliquid-buy, .btn-checkout {
+.btn-register, .btn-selfliquid-add-to-cart, .btn-selfliquid-buy, .btn-checkout, .btn-applyFilters {
     background-color: #565656;
     outline: none;
     color: #fff;
@@ -485,7 +485,9 @@ span.price-text-color{
 }
 .btn-register:hover, .btn-register:focus,
 .btn-selfliquid-add-to-cart:hover, .btn-selfliquid-add-to-cart:focus,
-.btn-selfliquid-buy:hover, .btn-selfliquid-buy:focus{
+.btn-selfliquid-buy:hover, .btn-selfliquid-buy:focus,
+.btn-checkout:hover, .btn-checkout:focus,
+.btn-applyFilters:hover, .btn-applyFilters:focus{
     color: #fff;
     background-color: #363636;
     border-color: #363636;

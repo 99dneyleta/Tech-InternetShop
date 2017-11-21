@@ -22,3 +22,28 @@
 .brandForm .form-group:last-child{
     margin-bottom: 7%;
 }
+
+.col-item{
+    margin-top: 10%;
+}
+
+.pagination{
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.pagination li{
+    padding: 1% 1.5%;
+    line-height: 1;
+    margin-left: 1%;
+}
+
+.pagination li.active{
+    border: 1px solid #737373;
+    background-color: #565656;
+
+}
+
+.pagination li.active a{
+    color: white;
+}
