@@ -15,7 +15,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'firstName',
+        'lastName',
+        'secondName',
+        'phone',
+        'region',
+        'city',
+        'postNumber',
+        'email',
+        'password',
+        'isAdmin'
     ];
 
     /**
@@ -24,6 +33,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'isAdmin'
     ];
+    public $timestamps = false;
+
 }
