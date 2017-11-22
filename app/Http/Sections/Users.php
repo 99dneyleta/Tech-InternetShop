@@ -44,9 +44,18 @@ class Users extends Section implements Initializable
 
     public function onDisplay()
     {
-        return \AdminDisplay::table()->with('users')
+        return \AdminDisplay::table()
             ->setColumns(
-                \AdminColumn::text('firstName', 'Name')->setWidth('100px')
+                \AdminColumn::text('id', 'ID')->setWidth('30px'),
+                \AdminColumn::text('firstName', 'First Name')->setWidth('100px'),
+                \AdminColumn::text('lastName', 'Last Name')->setWidth('100px'),
+                \AdminColumn::text('secondName', 'Second Name')->setWidth('100px'),
+                \AdminColumn::text('city', 'City')->setWidth('100px'),
+                \AdminColumn::text('region', 'Region')->setWidth('100px'),
+                \AdminColumn::text('postNumber', 'Post Number')->setWidth('100px'),
+                \AdminColumn::text('email', 'Email')->setWidth('100px'),
+                \AdminColumn::text('phone', 'Phone')->setWidth('100px')
+
             )->paginate(20);
     }
 

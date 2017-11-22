@@ -17,7 +17,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
      * @var array
      */
     protected $sections = [
-        User::class => 'App\Http\Sections\Users',
+        \App\User::class => 'App\Http\Sections\Users',
     ];
 
     /**
@@ -30,24 +30,15 @@ class AdminSectionsServiceProvider extends ServiceProvider
     	//
 
         parent::boot($admin);
-        $this->registerNRoles();
+
         $this->registerNavigation();
-        $this->registerMediaPackages();
+
 
     }
 
     private function registerNavigation()
     {
-        AdminNavigation::setFromArray([
-            [
-                'title' => 'Users',
-                'icon' => 'fa fa-group',
-                'priority' => 1000,
-                'pages' => [
-                    (new Page(User::class))->setPriority(0)
-                ]
-            ]
-        ]);
+
     }
 
 
