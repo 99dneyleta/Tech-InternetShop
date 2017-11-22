@@ -47,3 +47,13 @@
 .pagination li.active a{
     color: white;
 }
+
+.nameOfGalery, .sortBy{
+    display: inline;
+}
+
+.sortBy {
+    float: right;
+    border: 1px solid #ddd;
+    padding: 0.5%;
+}
