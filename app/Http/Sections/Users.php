@@ -54,7 +54,8 @@ class Users extends Section implements Initializable
                 \AdminColumn::text('region', 'Region')->setWidth('100px'),
                 \AdminColumn::text('postNumber', 'Post Number')->setWidth('100px'),
                 \AdminColumn::text('email', 'Email')->setWidth('100px'),
-                \AdminColumn::text('phone', 'Phone')->setWidth('100px')
+                \AdminColumn::text('phone', 'Phone')->setWidth('100px'),
+                \AdminColumn::text('isAdmin', 'Admin')->setWidth('100px')
 
             )->paginate(20);
     }
@@ -62,7 +63,16 @@ class Users extends Section implements Initializable
     public function onEdit($id)
     {
         return \AdminForm::panel()->addBody([
-            \AdminFormElement::text('firstName', 'Name')->required()
+            \AdminFormElement::text('firstName', 'First Name')->required(),
+            \AdminFormElement::text('lastName', 'Last Name')->required(),
+            \AdminFormElement::text('secondName', 'Second Name')->required(),
+            \AdminFormElement::text('city', 'City')->required(),
+            \AdminFormElement::text('region', 'Region')->required(),
+            \AdminFormElement::text('postNumber', 'Post Number')->required(),
+            \AdminFormElement::text('email', 'Email')->required(),
+            \AdminFormElement::text('password', 'Password')->required(),
+            \AdminFormElement::text('phone', 'Phone')->required(),
+            \AdminFormElement::checkbox('isAdmin', 'Admin')
         ]);
     }
     public function onCreate()
@@ -78,7 +88,7 @@ class Users extends Section implements Initializable
      */
     public function getCreateTitle()
     {
-        return 'Добавление роли';
+        return $this->onDisplay();
     }
 
     /**
