@@ -20,10 +20,13 @@ class CreateEliquidsTable extends Migration
             $table->integer('vg');
             $table->integer('pg');
             $table->float('nicotine');
-            $table->integer('size');
+            $table->integer('sizeID')->unsigned();
+            $table->foreign('sizeID')->references('id')->on('priceforsize');
             $table->float('price');
             $table->integer('quantity');
             $table->text('description');
+            $table->boolean('isFlavour')->nullable();
+            $table->float('oneNicotinePrice')->nullable();
             $table->text('photo');
         });
     }
