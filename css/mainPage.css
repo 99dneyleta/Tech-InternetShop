@@ -342,7 +342,7 @@ hr{
     bottom: -10%;
 }
 
-li[data-target="#carouselBestselling"], li[data-target="#carouselSale"], li[data-target="#carouselNew"]{
+li[data-target="#carouselBestselling"], li[data-target="#carouselSale"], li[data-target="#carouselNew"] {
     background-color: #969696;
 }
 
@@ -471,7 +471,7 @@ span.price-text-color{
     color: #666;
 }
 
-.btn-register, .btn-selfliquid-add-to-cart, .btn-selfliquid-buy, .btn-checkout, .btn-applyFilters {
+.btn-register, .btn-selfliquid-add-to-cart, .btn-selfliquid-buy, .btn-checkout, .btn-applyFilters, .btn-add-to-cart, .btn-buy {
     background-color: #565656;
     outline: none;
     color: #fff;
@@ -487,7 +487,9 @@ span.price-text-color{
 .btn-selfliquid-add-to-cart:hover, .btn-selfliquid-add-to-cart:focus,
 .btn-selfliquid-buy:hover, .btn-selfliquid-buy:focus,
 .btn-checkout:hover, .btn-checkout:focus,
-.btn-applyFilters:hover, .btn-applyFilters:focus{
+.btn-applyFilters:hover, .btn-applyFilters:focus,
+.btn-add-to-cart:hover, .btn-add-to-cart:focus,
+.btn-buy:hover, .btn-buy:focus{
     color: #fff;
     background-color: #363636;
     border-color: #363636;
