@@ -58,23 +58,6 @@ $(document).ready(function(){
 
         }
     });
-
-    $("#username-reg").focusout(function(){
-        if($(this).val()===''){
-            $(this).css("border-color", "#FF0000");
-            $('#register-submit').attr('disabled',true);
-            $('#register-submit').css('color',"#565656");
-            $("#error_name").text("* You have to enter your name!");
-        }
-        else
-        {
-            $(this).css("border-color", "#2eb82e");
-            $('#register-submit').attr('disabled',false);
-            $('#register-submit').css('color',"white");
-            $("#error_name").text("");
-
-        }
-    });
     $("#password-reg").focusout(function(){
         $pass = $('#password-reg').val();
         if($(this).val()===''){
@@ -164,13 +147,6 @@ $(document).ready(function(){
         }
     });
     $( "#submit" ).click(function() {
-        if($("#username-reg").val()==='')
-        {
-            $("#username-reg").css("border-color", "#FF0000");
-            $('#register-submit').css('color',"#565656");
-            $('#register-submit').attr('disabled',true);
-            $("#error_name").text("* You have to enter your first name!");
-        }
         if($("#tel").val()==='')
         {
             $("#tel").css("border-color", "#FF0000");
