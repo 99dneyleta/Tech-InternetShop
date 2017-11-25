@@ -71,7 +71,7 @@ span.logo{
     position: relative;
 }
 
-.modal-container input[type=text]{
+.modal-container input[type=text], .modal-container input[type=email]{
     margin-top: 5%;
 }
 
