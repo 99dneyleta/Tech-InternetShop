@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>VapeON User</title>
+    <title>VapeON Product</title>
     <link rel="stylesheet" href="../../css/bootstrap-grid.css">
-    <!--<link rel="stylesheet" href="../css/bootstrap-reboot.css">-->
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.css">
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link href="http://allfont.ru/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/mainPage.css">
-    <link rel="stylesheet" href="../../css/user_profile.css">
+    <link rel="stylesheet" href="../../css/productPage.css">
 </head>
 <body>
     <section id="header">
@@ -300,256 +300,234 @@
     </div>
 </section>
     <section id="headerMenu">
-        <div class="container headerMenu">
-            <div class="row">
-                <div class="col-sm-9">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Complete kits</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tanks</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">RDA</a>
-                                <a class="dropdown-item" href="#">RDTA</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mods</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">BoxMod</a>
-                                <a class="dropdown-item" href="#">MechMod</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">E-liquid</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Premium</a>
-                                <a class="dropdown-item" href="#">Simple</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accessories</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Atomizer</a>
-                                <a class="dropdown-item" href="#">Battery</a>
-                                <a class="dropdown-item" href="#">Cotton</a>
-                                <a class="dropdown-item" href="#">Coil</a>
-                                <a class="dropdown-item" href="#">Case</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Recipes</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <form class="search form-inline" role="search">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search" name="q">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><img src="../../img/search.png" alt="search"></button>
-                            </div>
+    <div class="container headerMenu">
+        <div class="row">
+            <div class="col-sm-9">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="comleteKitsGallery.html">Complete kits</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tanks</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">RDA</a>
+                            <a class="dropdown-item" href="#">RDTA</a>
                         </div>
-                    </form>
-                </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mods</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">BoxMod</a>
+                            <a class="dropdown-item" href="#">MechMod</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">E-liquid</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Premium</a>
+                            <a class="dropdown-item" href="#">Simple</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accessories</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Atomizer</a>
+                            <a class="dropdown-item" href="#">Battery</a>
+                            <a class="dropdown-item" href="#">Cotton</a>
+                            <a class="dropdown-item" href="#">Coil</a>
+                            <a class="dropdown-item" href="#">Case</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Recipes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <form class="search form-inline" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><img src="../../img/search.png" alt="search"></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <section id="content">
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="mainPage.html"><img src="../../img/home.png" alt="home"></a></li>
-                <li class="active">Profile</li>
+                <li><a href="comleteKitsGallery.html">Box Mods</a></li>
+                <li class="active">Eleaf iStick QC 200W</li>
             </ul>
             <div class="row">
-                <div class="col-md-3">
-                    <img src="../../img/default-user.png" class="userPhoto" alt="userPhoto">
-                    <h2 class="mainUserName">John Snow</h2>
-                </div>
-                <div class="col-md-9">
-                    <ul class="nav nav-tabs">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <li><a data-toggle="tab" href="#orders-tab">Orders</a></li>
-                            </div>
-                            <div class="col-sm-4">
-                                <li class="active"><a data-toggle="tab" href="#selfInf-tab">Self information</a></li>
-                            </div>
-                            <div class="col-sm-4">
-                                <li><a data-toggle="tab" href="#address-tab">Address</a></li>
-                            </div>
-                        </div>
+                <div class="preview col-sm-5">
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="../../img/kits/eleaf-ijust-s-silver.jpg" /></div>
+                        <div class="tab-pane" id="pic-2"><img src="../../img/kits/vape-kits-kanger-dripbox-160w-tc-kit-1_1024x1024.jpg" /></div>
+                        <div class="tab-pane" id="pic-3"><img src="../../img/kits/picomelo0.jpg" /></div>
+                        <div class="tab-pane" id="pic-4"><img src="../../img/kits/ijusts_new.jpg" /></div>
+                        <div class="tab-pane" id="pic-5"><img src="../../img/kits/kanger-top-evod.jpg" /></div>
+                    </div>
+                    <ul class="preview-thumbnail nav nav-tabs">
+                        <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../../img/kits/eleaf-ijust-s-silver.jpg" /></a></li>
+                        <li><a data-target="#pic-2" data-toggle="tab"><img src="../../img/kits/vape-kits-kanger-dripbox-160w-tc-kit-1_1024x1024.jpg" /></a></li>
+                        <li><a data-target="#pic-3" data-toggle="tab"><img src="../../img/kits/picomelo0.jpg" /></a></li>
+                        <li><a data-target="#pic-4" data-toggle="tab"><img src="../../img/kits/ijusts_new.jpg" /></a></li>
+                        <li><a data-target="#pic-5" data-toggle="tab"><img src="../../img/kits/kanger-top-evod.jpg" /></a></li>
                     </ul>
-                    <hr>
-                    <div class="arrow-down"></div>
-                    <div class="tab-content">
-                        <div id="orders-tab" class="tab-pane">
-                            <table class="ordersTable table">
-                                <tr class="headerTable">
-                                    <th>Order number</th>
-                                    <th>Items</th>
-                                    <th>Total price</th>
-                                    <th>Status</th>
-                                </tr>
-                                <tr>
-                                    <td class="orderNumber">12345</td>
-                                    <td>
-                                        <ul class="itemsList">
-                                            <li class="item">Wismec RX300 TC</li>
-                                            <li class="item">SMOK TFV8 Cloud Beast RTA</li>
-                                            <li class="item">SMOK V8-T6 0.20hm <b>x 2</b></li>
-                                            <li class="item">LG 18650 HG2 3000mAh 35A <b>x 4</b></li>
-                                            <li class="item">Coctail Cream Rafaello</li>
-                                        </ul>
-                                    </td>
-                                    <td class="totalPrice"><b>$165.55</b></td>
-                                    <td class="status">Processed</td>
-                                </tr>
-                                <tr>
-                                    <td class="orderNumber">12345</td>
-                                    <td>
-                                        <ul class="itemsList">
-                                            <li class="item">Wismec RX300 TC</li>
-                                            <li class="item">SMOK TFV8 Cloud Beast RTA</li>
-                                            <li class="item">SMOK V8-T6 0.20hm <b>x 2</b></li>
-                                            <li class="item">LG 18650 HG2 3000mAh 35A <b>x 4</b></li>
-                                            <li class="item">Coctail Cream Rafaello</li>
-                                        </ul>
-                                    </td>
-                                    <td class="totalPrice"><b>$165.55</b></td>
-                                    <td class="status">Sent</td>
-                                </tr>
-                            </table>
+                </div>
+                <div class="info col-sm-7">
+                    <h2 class="productName"><b>Eleaf iStick QC 200W</b></h2>
+                    <h3>
+                        <span class="price">$49.95</span>
+                        <span class="oldPrice">$56.95</span>
+                    </h3>
+                    <p class="brand"><b>Brand:</b> Eleaf</p>
+                    <p class="battery"><b>Battery capacity:</b> 5000mAh</p>
+                    <p class="wattage"><b>Output wattage:</b> 1-200W</p>
+                    <p class="thread"><b>Thread type:</b> 510</p>
+                    <p class="country"><b>Country:</b> China</p>
+                    <p class="description">Eleaf has added another formidable internal battery vape MOD to their arsenal of
+                        vaporizers with the Eleaf iStick 200W QC Vape MOD. This powerful vape MOD
+                        offers impressive output and consistency for a most reliable experience. </p>
+                    <p class="colors">
+                        <b>Colors: </b>
+                        <span class="color black"><input type="radio" name="color" id="black"></span>
+                        <span class="color red"><input type="radio" name="color" id="red"></span>
+                        <span class="color silver"><input type="radio" name="color" id="silver"></span>
+                        <span class="color brown"><input type="radio" name="color" id="brown"></span>
+                        <span class="color green"><input type="radio" name="color" id="green"></span>
+                    </p>
+                    <p class="quantity">
+                        <b>Quantity: </b>
+                        <span class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                                    -
+                                </button>
+                            </span>
+                            <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                                    +
+                                </button>
+                            </span>
+                        </span>
+                    </p>
+                    <input type="submit" class="btn btn-add-to-cart" value="Add to cart">
+                    <input type="submit" class="btn btn-buy" value="Buy now">
+                </div>
+            </div>
+            <h3 class="alsoPurchased"><b>Also purchased</b></h3>
+            <hr>
+            <div class="arrow-down"></div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img src="../../img/kits/kanger-top-evod.jpg" class="img-responsive" alt="a" />
                         </div>
-                        <div id="selfInf-tab" class="tab-pane active">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="fName">First Name</label>
-                                            <input type="text" id="fName" class="form-control" value="John">
-                                            <span id="errorFName" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="sName">Second Name</label>
-                                            <input type="text" id="sName" class="form-control" value="Ned">
-                                            <span id="errorSName" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="lName">Last Name</label>
-                                            <input type="text" id="lName" class="form-control" value="Snow">
-                                            <span id="errorLName" class="text-danger"></span>
-                                        </div>
-                                    </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price">
+                                    <h5>Sample Product</h5>
+                                    <h5 class="price-text-color">$199.99</h5>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="mail">Email</label>
-                                    <input type="text" id="mail" class="form-control" value="johnSnow@gmail.com">
-                                    <span id="errorMail" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="dateOfBirth">Date of Birth</label>
-                                    <input type="date" id="dateOfBirth" class="form-control" value="1997-10-24">
-                                    <span id="errorDoB" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone number</label>
-                                    <input type="text" id="phone" class="form-control" value="0508888888">
-                                    <span id="errorPhone" class="text-danger"></span>
-                                </div>
-                                <label for="photo">Your photo</label>
-                                <div class="input-group image-preview">
-
-                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
-                                    <span class="input-group-btn">
-                                        <!-- image-preview-clear button -->
-                                        <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-                                            <span class="glyphicon glyphicon-remove"></span> Clear
-                                        </button>
-                                        <!-- image-preview-input -->
-                                        <div class="btn btn-default image-preview-input">
-                                            <span class="image-preview-input-title">Browse</span>
-                                            <input id="photo" type="file" accept="image/png, image/jpeg, image/jpg" name="input-file-preview"/>
-                                        </div>
-                                    </span>
-                                </div>
-                                <h4><b>Change your password</b></h4>
-                                <div class="form-group">
-                                    <label for="oldPass">Old password</label>
-                                    <input type="password" id="oldPass" class="form-control">
-                                    <span id="errorOldPass" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="newPass">New password</label>
-                                    <input type="password" id="newPass" class="form-control">
-                                    <span id="errorNewPass" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="confPass">Confirm password</label>
-                                    <input type="password" id="confPass" class="form-control">
-                                    <span id="errorConfPass" class="text-danger"></span>
-                                </div>
-                                <input type="submit" name="selfInf-submit" class="btn btn-saveSelfInf" id="selfInf-submit" value="Save">
-                            </form>
+                            </div>
+                            <div class="separator clear-left">
+                                <p class="btn-add">
+                                    <a href="" class="hidden-sm">Add to cart</a>
+                                </p>
+                                <p class="btn-details">
+                                    <a href="" class="hidden-sm">More details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
                         </div>
-                        <div id="address-tab" class="tab-pane">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="country">Country</label>
-                                            <input type="text" id="country" class="form-control" value="Ukraine">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="street">Street</label>
-                                            <input type="text" id="street" class="form-control" value="Holovna">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="city">City</label>
-                                            <input type="text" id="city" class="form-control" value="Chernivtsi">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label for="number">Number</label>
-                                                    <input type="text" id="number" class="form-control" value="25">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label for="flat">Flat</label>
-                                                    <input type="text" id="flat" class="form-control" value="4">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label for="zip">ZIP</label>
-                                                    <input type="text" id="zip" class="form-control" value="58003">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img src="../../img/e-liquids/raffaello-cocktail.png" class="img-responsive" alt="a" />
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price">
+                                    <h5>Sample Product</h5>
+                                    <h5 class="price-text-color">$199.99</h5>
                                 </div>
-                                <input type="submit" name="addr-submit" class="btn btn-addr" id="addr-submit" value="Save">
-                            </form>
+                            </div>
+                            <div class="separator clear-left">
+                                <p class="btn-add">
+                                    <a href="" class="hidden-sm">Add to cart</a>
+                                </p>
+                                <p class="btn-details">
+                                    <a href="" class="hidden-sm">More details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img src="../../img/accessories/4f1c5b7c9af41b953df5b49d6c40ee65.jpg" class="img-responsive" alt="a" />
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price">
+                                    <h5>Sample Product</h5>
+                                    <h5 class="price-text-color">$199.99</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p class="btn-add">
+                                    <a href="" class="hidden-sm">Add to cart</a>
+                                </p>
+                                <p class="btn-details">
+                                    <a href="" class="hidden-sm">More details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img src="../../img/mods/wrx3001.jpg" class="img-responsive" alt="a" />
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price">
+                                    <h5>Sample Product</h5>
+                                    <h5 class="price-text-color">$199.99</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p class="btn-add">
+                                    <a href="" class="hidden-sm">Add to cart</a>
+                                </p>
+                                <p class="btn-details">
+                                    <a href="" class="hidden-sm">More details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="footer">
         <div class="container footer">
             <div class="row">
@@ -583,6 +561,7 @@
     <script src="https://unpkg.com/popper.js"></script>
     <script src="../../js/bootstrap.js"></script>
     <script src="../../js/main.js"></script>
-    <script src="../../js/user_profile.js"></script>
+    <script src="../../js/productPage.js"></script>
+    <script src="../../js/cart.js"></script>
 </body>
 </html>
