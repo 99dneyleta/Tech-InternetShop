@@ -1,19 +1,51 @@
 
 $(document).ready(function(){
     $flag=1;
-    $("#name").focusout(function(){
+    $("#fName").focusout(function(){
         if($(this).val()===''){
             $(this).css("border-color", "#FF0000");
             $('#selfInf-submit').attr('disabled',true);
             $('#selfInf-submit').css('color',"#565656");
-            $("#errorName").text("* You have to enter your name!");
+            $("#errorFName").text("* You have to enter your name!");
         }
         else
         {
             $(this).css("border-color", "#2eb82e");
             $('#selfInf-submit').attr('disabled',false);
             $('#selfInf-submit').css('color',"white");
-            $("#errorName").text("");
+            $("#errorFName").text("");
+
+        }
+    });
+    $("#sName").focusout(function(){
+        if($(this).val()===''){
+            $(this).css("border-color", "#FF0000");
+            $('#selfInf-submit').attr('disabled',true);
+            $('#selfInf-submit').css('color',"#565656");
+            $("#errorSName").text("* You have to enter your name!");
+        }
+        else
+        {
+            $(this).css("border-color", "#2eb82e");
+            $('#selfInf-submit').attr('disabled',false);
+            $('#selfInf-submit').css('color',"white");
+            $("#errorSName").text("");
+
+        }
+    });
+    $("#lName").focusout(function(){
+        if($(this).val()===''){
+            $(this).css("border-color", "#FF0000");
+            $('#selfInf-submit').attr('disabled',true);
+            $('#selfInf-submit').css('color',"#565656");
+            $("#errorLName").text("* You have to enter your name!");
+        }
+        else
+        {
+            $(this).css("border-color", "#2eb82e");
+            $('#selfInf-submit').attr('disabled',false);
+            $('#selfInf-submit').css('color',"white");
+            $("#errorLName").text("");
 
         }
     });
