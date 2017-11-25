@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('listOfOrders')->nullable();
             $table->string('password');
             $table->boolean('isAdmin')->default(0);
+            $table->text('photo')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
