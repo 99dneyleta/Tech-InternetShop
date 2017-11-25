@@ -18,6 +18,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
      */
     protected $sections = [
         \App\User::class => 'App\Http\Sections\Users',
+        \App\Product::class => 'App\Http\Sections\Products'
     ];
 
     /**
@@ -31,7 +32,6 @@ class AdminSectionsServiceProvider extends ServiceProvider
 
         parent::boot($admin);
 
-        $this->registerNavigation();
 
 
     }
@@ -42,20 +42,14 @@ class AdminSectionsServiceProvider extends ServiceProvider
     }
 
 
-    private function registerNRoles()
+    private function registerNRoutes()
     {
-        $this->app['router']->group(['prefix' => config('sleeping_owl.url_prefix'), 'middleware' => config('sleeping_owl.middleware')], function ($router) {
-            $router->get('', ['as' => 'admin.dashboard', function () {
-                $content = 'Define your dashboard here.';
-                return AdminSection::view($content, 'Dashboard');
-            }]);
-        });
+
     }
 
     private function registerMediaPackages()
     {
-        PackageManager::add('front.controllers')
-            ->js(null, asset('js/controllers.js'));
+
     }
 
 }

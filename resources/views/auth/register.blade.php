@@ -25,17 +25,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('secondName') ? ' has-error' : '' }}">
+                        <div class="form-group">
                             <label for="secondName" class="col-md-4 control-label">Second Name</label>
-
                             <div class="col-md-6">
-                                <input id="secondName" type="text" class="form-control" name="secondName" value="{{ old('secondName') }}" required autofocus>
-
-                                @if ($errors->has('secondName'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('secondName') }}</strong>
-                                    </span>
-                                @endif
+                                <input id="secondName" type="text" class="form-control" name="secondName" value="{{ old('secondName') }}">
                             </div>
                         </div>
 
@@ -43,7 +36,7 @@
                             <label for="lastName" class="col-md-4 control-label">Last Name</label>
 
                             <div class="col-md-6">
-                                <input id="lastName" type="text" class="form-control" name="lastName" value="{{ old('lastName') }}" required autofocus>
+                                <input id="lastName" type="text" class="form-control" name="lastName" value="{{ old('lastName') }}">
 
                                 @if ($errors->has('lastName'))
                                     <span class="help-block">
@@ -85,7 +78,7 @@
                             <label for="city" class="col-md-4 control-label">City</label>
 
                             <div class="col-md-6">
-                                <input id="city" type="text" class="form-control" name="city" required>
+                                <input id="city" type="text" class="form-control" name="city">
 
                                 @if ($errors->has('city'))
                                     <span class="help-block">
@@ -99,7 +92,7 @@
                             <label for="postNumber" class="col-md-4 control-label">Post Number</label>
 
                             <div class="col-md-6">
-                                <input id="postNumber" type="text" class="form-control" name="postNumber" required>
+                                <input id="postNumber" type="text" class="form-control" name="postNumber">
 
                                 @if ($errors->has('postNumber'))
                                     <span class="help-block">
@@ -113,7 +106,7 @@
                             <label for="phone" class="col-md-4 control-label">Phone</label>
 
                             <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control" name="phone" required>
+                                <input id="phone" type="text" class="form-control" name="phone">
 
                                 @if ($errors->has('phone'))
                                     <span class="help-block">
@@ -127,7 +120,7 @@
                             <label for="region" class="col-md-4 control-label">Region</label>
 
                             <div class="col-md-6">
-                                <input id="region" type="text" class="form-control" name="region" required>
+                                <input id="region" type="text" class="form-control" name="region">
 
                                 @if ($errors->has('region'))
                                     <span class="help-block">

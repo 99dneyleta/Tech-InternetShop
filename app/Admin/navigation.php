@@ -19,7 +19,7 @@ use SleepingOwl\Admin\Navigation\Page;
 //
 // // or
 //
-// AdminSection::addMenuPage(\App\User::class)
+//AdminSection::addMenuPage(\App\User::class);
 
 return [
 

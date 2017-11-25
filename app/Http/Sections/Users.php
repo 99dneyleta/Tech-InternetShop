@@ -64,90 +64,37 @@ class Users extends Section implements Initializable
     {
         return \AdminForm::panel()->addBody([
             \AdminFormElement::text('firstName', 'First Name')->required(),
-            \AdminFormElement::text('lastName', 'Last Name')->required(),
-            \AdminFormElement::text('secondName', 'Second Name')->required(),
-            \AdminFormElement::text('city', 'City')->required(),
-            \AdminFormElement::text('region', 'Region')->required(),
-            \AdminFormElement::text('postNumber', 'Post Number')->required(),
+            \AdminFormElement::text('lastName', 'Last Name'),
+            \AdminFormElement::text('secondName', 'Second Name') ,
+            \AdminFormElement::text('city', 'City'),
+            \AdminFormElement::text('region', 'Region'),
+            \AdminFormElement::text('postNumber', 'Post Number'),
             \AdminFormElement::text('email', 'Email')->required(),
             \AdminFormElement::text('password', 'Password')->required(),
-            \AdminFormElement::text('phone', 'Phone')->required(),
+            \AdminFormElement::text('phone', 'Phone'),
             \AdminFormElement::checkbox('isAdmin', 'Admin')
         ]);
     }
     public function onCreate()
     {
-        // Создание и редактирование записи идентичны, поэтому перенаправляем на метод редактирования
         return $this->onEdit(null);
     }
 
     /**
-     * Переопределение метода содержащего заголовок создания записи
-     *
-     * @return string|\Symfony\Component\Translation\TranslatorInterface
+     * @return void
      */
-    public function getCreateTitle()
+    public function onDelete($id)
     {
-        return $this->onDisplay();
+        // remove if unused
     }
 
     /**
-     * Переопределение метода для запрета удаления записи
-     *
-     * @param \Illuminate\Database\Eloquent\Model $model
-     *
-     * @return bool
+     * @return void
      */
-    public function isDeletable(\Illuminate\Database\Eloquent\Model $model)
+    public function onRestore($id)
     {
-        return false;
+        // remove if unused
     }
-
-    /**
-     * Переопределение метода содержащего ссылку на редактирование записи
-     *
-     * @param string|int $id
-     *
-     * @return string
-     */
-    public function getEditUrl($id)
-    {
-        return 'Ссылка на страницу редактирования';
-    }
-
-    /**
-     * Переопределение метода содержащего ссылку на удаление записи
-     *
-     * @param string|int $id
-     *
-     * @return string
-     */
-    public function getDeleteUrl($id)
-    {
-        return 'Ссылка на удаление записи';
-    }
-
-    /**
-     * @see http://sleepingowladmin.ru/docs/model_configuration#ограничение-прав-доступа
-     *
-     * @var bool
-     */
-    protected $checkAccess = false;
-
-    /**
-     * @var string
-     */
-    protected $title;
-
-    /**
-     * @var string
-     */
-    protected $alias;
-
-
-    /**
-     * @return FormInterface
-     */
 
 
 
