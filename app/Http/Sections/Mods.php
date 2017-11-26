@@ -2,59 +2,37 @@
 
 namespace App\Http\Sections;
 
-use AdminNavigation;
+use Illuminate\Support\Facades\DB;
 use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
 use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Section;
 
 /**
- * Class Products
+ * Class Mods
  *
- * @property \App\Product $model
+ * @property \App\Mod $model
  *
  * @see http://sleepingowladmin.ru/docs/model_configuration_section
  */
-class Products extends Section implements Initializable
+class Mods extends Section implements Initializable
 {
-    /**
-     * @see http://sleepingowladmin.ru/docs/model_configuration#ограничение-прав-доступа
-     *
-     * @var bool
-     */
+    protected $model = '\App\Mod';
 
+//   Init class
     public function initialize()
     {
-        AdminNavigation::setFromArray([
-            [
-                'title' => 'Products',
-                'icon' => 'fa fa-sitemap',
-                'pages' => [
-                    [
-                        'title' => 'BoxMods',
-                        'url' => '/mods'
-       ],
-       [
-           'title' => 'Atom',
-           'url' => '/atoms'
-       ],
-     ]
-   ],
-            $this->creating(function($config, \Illuminate\Database\Eloquent\Model $model) {
-
-            })
-]);
-        /*$this->addToNavigation($priority = 500, function() {
-            return \App\Product::count();
+        $this->addToNavigation($priority = 100, function() {
+            return DB::table('products')->where('typeID','=', 1)->count();
         });
         $this->creating(function($config, \Illuminate\Database\Eloquent\Model $model) {
 
-        });*/
+        });
     }
 
     public function getIcon()
     {
-        return 'fa fa-sitemap';
+        return 'fa fa-group';
     }
 
     /**
@@ -62,12 +40,12 @@ class Products extends Section implements Initializable
      */
     public function getTitle()
     {
-        return trans('Products');
+        return trans('Mods');
     }
 
     public function onDisplay()
     {
-        return \AdminDisplay::table()
+        $display = \AdminDisplay::table()
             ->setColumns(
                 \AdminColumn::text('id', 'ID')->setWidth('30px'),
                 \AdminColumn::text('brandID', 'Brand ID')->setWidth('100px'),
@@ -82,10 +60,13 @@ class Products extends Section implements Initializable
                 \AdminColumn::text('photo', 'photo')->setWidth('100px'),
                 \AdminColumn::text('typeID', 'type Id')->setWidth('100px'),
                 \AdminColumn::text('power', 'Power')->setWidth('100px'),
-                \AdminColumn::text('capacity', 'capacity')->setWidth('100px'),
-                \AdminColumn::text('volume', 'volume')->setWidth('100px'),
-                \AdminColumn::text('crutchsQuantity', 'crutchs Quantity')->setWidth('100px')
+                \AdminColumn::text('capacity', 'Capacity')->setWidth('100px')
             )->paginate(20);
+
+        $display->setApply(function ($query) {
+            $query->where('typeID', '=', 1);
+        });
+        return $display;
     }
 
     public function onEdit($id)
@@ -102,39 +83,10 @@ class Products extends Section implements Initializable
             \AdminFormElement::text('photo', 'photo'),
             \AdminFormElement::text('typeID', 'type Id'),
             \AdminFormElement::text('power', 'Power'),
-            \AdminFormElement::text('capacity', 'capacity'),
-            \AdminFormElement::text('volume', 'volume'),
-            \AdminFormElement::text('crutchsQuantity', 'crutchs Quantity'),
-            \AdminFormElement::checkbox('isAdmin', 'Admin')
+            \AdminFormElement::text('capacity', 'Capacity')
+
         ]);
     }
-
-
-    /**
-     * @var string
-     */
-
-
-    /**
-     * @var string
-     */
-
-
-    /**
-     * @return DisplayInterface
-     */
-
-
-    /**
-     * @param int $id
-     *
-     * @return FormInterface
-     */
-
-
-    /**
-     * @return FormInterface
-     */
     public function onCreate()
     {
         return $this->onEdit(null);

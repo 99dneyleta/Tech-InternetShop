@@ -38,4 +38,35 @@ class Product extends Model
     {
         return $this->hasOne('App\Type');
     }
+
+    public function scopeAtoms($query)
+    {
+        return $query->where('typeID',3);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

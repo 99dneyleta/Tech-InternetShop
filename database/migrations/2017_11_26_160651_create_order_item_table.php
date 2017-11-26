@@ -33,3 +33,4 @@ class CreateOrderItemTable extends Migration
         Schema::dropIfExists('order_item');
     }
 }
+

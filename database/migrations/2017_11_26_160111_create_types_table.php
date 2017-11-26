@@ -15,8 +15,12 @@ class CreateTypesTable extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->text('type');
-            $table->text('productType');
+            $table->integer('typeID')->unsigned();
+            $table->integer('productTypeID')->unsigned();
+
+
+            $table->foreign('productTypeID')->references('id')->on('product_type');
+            $table->foreign('typeID')->references('id')->on('type');
         });
     }
 
