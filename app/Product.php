@@ -23,4 +23,19 @@ class Product extends Model
         'volume',
         'crutchsQuantity'
     ];
+
+    public function brand()
+    {
+        return $this->hasOne('App\Brand');
+    }
+
+    public function color()
+    {
+        return $this->hasOne('App\Color');
+    }
+
+    public function type()
+    {
+        return $this->hasOne('App\Type');
+    }
 }

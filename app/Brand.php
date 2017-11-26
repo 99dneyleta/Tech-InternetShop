@@ -10,4 +10,14 @@ class Brand extends Model
         'name',
         'country'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+    public function Brand()
+    {
+        return $this->belongsTo('App\Product');
+    }
 }

@@ -19,4 +19,9 @@ class Eliquid extends Model
         'oneNicotinePrice',
         'photo'
     ];
+
+    public function priceforsize()
+    {
+        return $this->hasOne('App\PriceforSize');
+    }
 }

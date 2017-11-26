@@ -10,4 +10,9 @@ class Type extends Model
         'type',
         'productType'
     ];
+
+    public function Brand()
+    {
+        return $this->belongsTo('App\Product');
+    }
 }

@@ -10,4 +10,9 @@ class PriceForSize extends Model
         'size',
         'price'
     ];
+
+    public function Eliquid()
+    {
+        return $this->belongsTo('App\Eliquid');
+    }
 }

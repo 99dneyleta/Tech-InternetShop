@@ -10,4 +10,9 @@ class Color extends Model
         'name',
         'HEX'
     ];
+
+    public function Brand()
+    {
+        return $this->belongsTo('App\Product');
+    }
 }
