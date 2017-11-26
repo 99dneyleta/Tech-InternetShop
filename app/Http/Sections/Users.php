@@ -21,7 +21,7 @@ class Users extends Section implements Initializable
 //   Init class
     public function initialize()
     {
-        $this->addToNavigation($priority = 500, function() {
+        $this->addToNavigation($priority = 0, function() {
           return \App\User::count();
         });
         $this->creating(function($config, \Illuminate\Database\Eloquent\Model $model) {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Sections;
 
+use AdminNavigation;
 use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
 use SleepingOwl\Admin\Contracts\Initializable;
@@ -24,12 +25,31 @@ class Products extends Section implements Initializable
 
     public function initialize()
     {
-        $this->addToNavigation($priority = 500, function() {
+        AdminNavigation::setFromArray([
+            [
+                'title' => 'Products',
+                'icon' => 'fa fa-sitemap',
+                'pages' => [
+                    [
+                        'title' => 'BoxMods',
+                        'url' => '/mods'
+       ],
+       [
+           'title' => 'Atom',
+           'url' => '/atoms'
+       ],
+     ]
+   ],
+            $this->creating(function($config, \Illuminate\Database\Eloquent\Model $model) {
+
+            })
+]);
+        /*$this->addToNavigation($priority = 500, function() {
             return \App\Product::count();
         });
         $this->creating(function($config, \Illuminate\Database\Eloquent\Model $model) {
 
-        });
+        });*/
     }
 
     public function getIcon()
@@ -71,7 +91,6 @@ class Products extends Section implements Initializable
     public function onEdit($id)
     {
         return \AdminForm::panel()->addBody([
-            \AdminFormElement::text('id', 'ID'),
             \AdminFormElement::text('brandID', 'Brand ID'),
             \AdminFormElement::text('model', 'Model'),
             \AdminFormElement::text('sizes', 'Sizes'),
