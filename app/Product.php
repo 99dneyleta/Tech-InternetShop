@@ -43,6 +43,7 @@ class Product extends Model
     {
         return $query->where('typeID',3);
     }
+    public $timestamps = false;
 
 
 

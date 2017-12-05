@@ -15,4 +15,5 @@ class Type extends Model
     {
         return $this->belongsTo('App\Product');
     }
+
 }

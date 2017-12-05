@@ -2,6 +2,7 @@
 
 namespace App\Http\Sections;
 
+use App\Brand;
 use Illuminate\Support\Facades\DB;
 use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
@@ -72,7 +73,7 @@ class Mods extends Section implements Initializable
     public function onEdit($id)
     {
         return \AdminForm::panel()->addBody([
-            \AdminFormElement::text('brandID', 'Brand ID'),
+            \AdminFormElement::select('brandID', 'Brand ID', Brand::getBrandList()),
             \AdminFormElement::text('model', 'Model'),
             \AdminFormElement::text('sizes', 'Sizes'),
             \AdminFormElement::text('connector', 'Connector'),
@@ -81,9 +82,10 @@ class Mods extends Section implements Initializable
             \AdminFormElement::text('quantity', 'quantity'),
             \AdminFormElement::text('description', 'description'),
             \AdminFormElement::text('photo', 'photo'),
-            \AdminFormElement::text('typeID', 'type Id'),
+            \AdminFormElement::select('typeID', 'type Id', array_combine(range(1,2),[1 => 'Mechmod', 2 => 'Boxmod'])),
             \AdminFormElement::text('power', 'Power'),
-            \AdminFormElement::text('capacity', 'Capacity')
+            \AdminFormElement::text('capacity', 'Capacity'),
+            \AdminFormElement::text('price', 'Price')
 
         ]);
     }

@@ -20,4 +20,14 @@ class Brand extends Model
     {
         return $this->belongsTo('App\Product');
     }
+
+    public static function getBrandList()
+    {
+        $users = \App\Brand::all('name')->all();
+        $list = array();
+        foreach ($users as $user) {
+            $list[] = $user->name;
+        }
+        return array_combine(range(1,count($list)),$list);
+    }
 }
