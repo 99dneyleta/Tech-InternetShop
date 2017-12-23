@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -15,7 +16,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'firstName',
+        'lastName',
+        'secondName',
+        'phone',
+        'region',
+        'city',
+        'postNumber',
+        'email',
+        'password',
+        'isAdmin'
     ];
 
     /**
@@ -24,6 +34,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'isAdmin'
     ];
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+    public $timestamps = false;
+
 }
