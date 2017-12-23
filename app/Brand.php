@@ -30,4 +30,5 @@ class Brand extends Model
         }
         return array_combine(range(1,count($list)),$list);
     }
+    public $timestamps = false;
 }

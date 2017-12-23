@@ -8,6 +8,7 @@ use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
 use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Section;
+use App\Color;
 
 /**
  * Class Mods
@@ -24,7 +25,7 @@ class Mods extends Section implements Initializable
     public function initialize()
     {
         $this->addToNavigation($priority = 100, function() {
-            return DB::table('products')->where('typeID','=', 1)->count();
+            return DB::table('products')->where('typeID','=', 1)->count() + DB::table('products')->where('typeID','=', 2)->count();
         });
         $this->creating(function($config, \Illuminate\Database\Eloquent\Model $model) {
 
@@ -65,20 +66,21 @@ class Mods extends Section implements Initializable
             )->paginate(20);
 
         $display->setApply(function ($query) {
-            $query->where('typeID', '=', 1);
+            $query->whereIn('typeID', [1,2]);
         });
         return $display;
     }
 
     public function onEdit($id)
     {
+        $colors = Color::getColorsList();
         return \AdminForm::panel()->addBody([
             \AdminFormElement::select('brandID', 'Brand ID', Brand::getBrandList()),
             \AdminFormElement::text('model', 'Model'),
             \AdminFormElement::text('sizes', 'Sizes'),
             \AdminFormElement::text('connector', 'Connector'),
             \AdminFormElement::text('material', 'Material'),
-            \AdminFormElement::text('colorID', 'colorId'),
+            \AdminFormElement::select('colorID', 'color',$colors),
             \AdminFormElement::text('quantity', 'quantity'),
             \AdminFormElement::text('description', 'description'),
             \AdminFormElement::text('photo', 'photo'),

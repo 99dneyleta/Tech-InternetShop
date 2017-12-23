@@ -23,4 +23,5 @@ class Atomaizer extends Model
         ];
 
     protected $table = 'products';
+    public $timestamps = false;
 }
