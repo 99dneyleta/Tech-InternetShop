@@ -2,6 +2,9 @@
 
 namespace App\Http\Sections;
 
+use App\Brand;
+use App\Color;
+use App\Type;
 use Illuminate\Support\Facades\DB;
 use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
@@ -28,7 +31,7 @@ class Atomaizers extends Section implements Initializable
     public function initialize()
     {
         $this->addToNavigation($priority = 100, function() {
-            return DB::table('products')->where('typeID','=', 3)->count();
+            return DB::table('products')->where('typeID','=', 3)->count() + DB::table('products')->where('typeID','=', 4)->count() + DB::table('products')->where('typeID','=', 5)->count();
         });
         $this->creating(function($config, \Illuminate\Database\Eloquent\Model $model) {
 
@@ -53,6 +56,7 @@ class Atomaizers extends Section implements Initializable
         $display = \AdminDisplay::table()
             ->setColumns(
                 \AdminColumn::text('id', 'ID')->setWidth('30px'),
+                \AdminColumn::image('avatar', 'Avatar'),
                 \AdminColumn::text('brandID', 'Brand ID')->setWidth('100px'),
                 \AdminColumn::text('model', 'Model')->setWidth('100px'),
                 \AdminColumn::text('sizes', 'Sizes')->setWidth('100px'),
@@ -65,30 +69,36 @@ class Atomaizers extends Section implements Initializable
                 \AdminColumn::text('photo', 'photo')->setWidth('100px'),
                 \AdminColumn::text('typeID', 'type Id')->setWidth('100px'),
                 \AdminColumn::text('volume', 'volume')->setWidth('100px'),
-                \AdminColumn::text('crutchsQuantity', 'crutchs Quantity')->setWidth('100px')
+                \AdminColumn::text('crutchsQuantity', 'crutchs Quantity')->setWidth('100px'),
+                \AdminColumn::text('price', 'Price')->setWidth('100px')
             )->paginate(20);
 
         $display->setApply(function ($query) {
-            $query->where('typeID', '=', 3);
+            $query->whereIn('typeID', [3,4,5]);
+
         });
         return $display;
     }
 
     public function onEdit($id)
     {
+        $brands = Brand::getBrandList();
+        $colors = Color::getColorsList();
+        $atomTypes = Type::getAtomsTypeList();
         return \AdminForm::panel()->addBody([
-            \AdminFormElement::text('brandID', 'Brand ID'),
+            \AdminFormElement::select('brandID', 'Brand ID',  $brands),
             \AdminFormElement::text('model', 'Model'),
             \AdminFormElement::text('sizes', 'Sizes'),
             \AdminFormElement::text('connector', 'Connector'),
             \AdminFormElement::text('material', 'Material'),
-            \AdminFormElement::text('colorID', 'colorId'),
+            \AdminFormElement::select('colorID', 'colorId', $colors),
             \AdminFormElement::text('quantity', 'quantity'),
             \AdminFormElement::text('description', 'description'),
             \AdminFormElement::text('photo', 'photo'),
-            \AdminFormElement::text('typeID', 'type Id'),
+            \AdminFormElement::select('typeID', 'type Id', array_combine(range(3,5),[3 => 'RDA', 4 => 'RTA', 5 => 'RDTA'])),
             \AdminFormElement::text('volume', 'volume'),
             \AdminFormElement::text('crutchsQuantity', 'crutchs Quantity'),
+            \AdminFormElement::text('price', 'Price'),
         ]);
     }
     public function onCreate()

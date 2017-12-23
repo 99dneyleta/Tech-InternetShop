@@ -17,9 +17,6 @@ class CreateTypesTable extends Migration
             $table->increments('id')->unique();
             $table->text('type');
             $table->text('product_type');
-
-
-
         });
     }
 
