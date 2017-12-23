@@ -16,4 +16,4 @@ Route::get('admin\Users', 'AdminPagesController@DisplayUsers');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/homee', 'HomeController@index')->name('home');
