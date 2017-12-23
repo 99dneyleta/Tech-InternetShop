@@ -36,6 +36,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token', 'isAdmin'
     ];
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
     public $timestamps = false;
 
 }

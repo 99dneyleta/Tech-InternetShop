@@ -24,4 +24,6 @@ class Eliquid extends Model
     {
         return $this->hasOne('App\PriceforSize');
     }
+    public $timestamps = false;
+    protected $table = 'eliquids';
 }

@@ -15,6 +15,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        if (file_exists($assetsFile = __DIR__ . '/../../resources/assets/admin/assets.php')) {
+            include $assetsFile;
+        }
     }
 
     /**
