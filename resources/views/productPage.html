@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VapeON Product</title>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link href="http://allfont.ru/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/mainPage.css">
+    <link rel="stylesheet" href="../../css/productPage.css">
+</head>
+<body>
+    <section id="header">
+    <div class="container header">
+        <div class="row">
+            <div class="col-sm-8">
+                <img src="../../img/logo.png" alt="logo" class="logo">
+                <span class="logo">VapeON</span>
+            </div>
+            <div class="col-md-2 selfliquid-block">
+                <a href="#" data-toggle="modal" data-target="#selfliquid-modal"><img src="../../img/e-liquidbottle-512.png" alt="selfLiquid"></a>
+                <div class="modal fade" id="selfliquid-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-container selfliquid-container">
+                            <div class="container">
+                                <div class="panel-heading">
+                                    <h1 class="modal-title">Make e-liquid yourself</h1>
+                                    <hr>
+                                    <div class="arrow-down"></div>
+                                </div>
+                                <div class="panel-body">
+                                    <h4 class="nameOfFilter">Size</h4>
+                                    <div class="row">
+                                        <div class="col-md-4 funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="size" id="30ml" checked/>
+                                                <label for="30ml">30ml</label>
+                                            </div>
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="size" id="100ml"/>
+                                                <label for="100ml">100ml</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="size" id="50ml"/>
+                                                <label for="50ml">50ml</label>
+                                            </div>
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="size" id="150ml"/>
+                                                <label for="150ml">150ml</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="size" id="70ml"/>
+                                                <label for="70ml">70ml</label>
+                                            </div>
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="size" id="200ml"/>
+                                                <label for="200ml">200ml</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="nameOfFilter">PG/VG</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="pg/vg" id="50/50" checked/>
+                                                <label for="50/50">50/50</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6  funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="pg/vg" id="70/30"/>
+                                                <label for="70/30">70/30</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="nameOfFilter">Flavor</h4>
+                                    <h5 style="margin-top: 2%">Tobacco</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 funkyradio">
+                                            <div class="funkyradio-tobacco">
+                                                <input type="checkbox" name="flavor" id="Arabic"/>
+                                                <label for="Arabic">Arabic</label>
+                                            </div>
+                                            <div class="funkyradio-tobacco">
+                                                <input type="checkbox" name="flavor" id="BlackHoney"/>
+                                                <label for="BlackHoney">Black Honey</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 funkyradio">
+                                            <div class="funkyradio-tobacco">
+                                                <input type="checkbox" name="flavor" id="CubanoType"/>
+                                                <label for="CubanoType">Cubano Type</label>
+                                            </div>
+                                            <div class="funkyradio-tobacco">
+                                                <input type="checkbox" name="flavor" id="BlackCherry"/>
+                                                <label for="BlackCherry">Black Cherry</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 style="margin-top: 2%">Fruit</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 funkyradio">
+                                            <div class="funkyradio-fruit">
+                                                <input type="checkbox" name="flavor" id="Acai"/>
+                                                <label for="Acai">Acai</label>
+                                            </div>
+                                            <div class="funkyradio-fruit">
+                                                <input type="checkbox" name="flavor" id="Apricot"/>
+                                                <label for="Apricot">Apricot</label>
+                                            </div>
+                                            <div class="funkyradio-fruit">
+                                                <input type="checkbox" name="flavor" id="BerryMix"/>
+                                                <label for="BerryMix">Berry Mix</label>
+                                            </div>
+                                            <div class="funkyradio-fruit">
+                                                <input type="checkbox" name="flavor" id="Coconut"/>
+                                                <label for="Coconut">Coconut</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 funkyradio">
+                                            <div class="funkyradio-fruit">
+                                                <input type="checkbox" name="flavor" id="Apple"/>
+                                                <label for="Apple">Apple</label>
+                                            </div>
+                                            <div class="funkyradio-fruit">
+                                                <input type="checkbox" name="flavor" id="Banana"/>
+                                                <label for="Banana">Banana</label>
+                                            </div>
+                                            <div class="funkyradio-fruit">
+                                                <input type="checkbox" name="flavor" id="Cantaloupe"/>
+                                                <label for="Cantaloupe">Cantaloupe</label>
+                                            </div>
+                                            <div class="funkyradio-fruit">
+                                                <input type="checkbox" name="flavor" id="Dragonfriut"/>
+                                                <label for="Dragonfriut">Dragonfriut</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 style="margin-top: 2%">Bake/Sweet</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 funkyradio">
+                                            <div class="funkyradio-bake">
+                                                <input type="checkbox" name="flavor" id="BananaCream"/>
+                                                <label for="BananaCream">Banana Cream</label>
+                                            </div>
+                                            <div class="funkyradio-bake">
+                                                <input type="checkbox" name="flavor" id="BerryCereal"/>
+                                                <label for="BerryCereal">Berry Cereal</label>
+                                            </div>
+                                            <div class="funkyradio-bake">
+                                                <input type="checkbox" name="flavor" id="Bubblegum"/>
+                                                <label for="Bubblegum">Bubblegum</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 funkyradio">
+                                            <div class="funkyradio-bake">
+                                                <input type="checkbox" name="flavor" id="BavarianCream"/>
+                                                <label for="BavarianCream">Bavarian Cream</label>
+                                            </div>
+                                            <div class="funkyradio-bake">
+                                                <input type="checkbox" name="flavor" id="BrownSugar"/>
+                                                <label for="BrownSugar">Brown Sugar</label>
+                                            </div>
+                                            <div class="funkyradio-bake">
+                                                <input type="checkbox" name="flavor" id="Caramel"/>
+                                                <label for="Caramel">Caramel</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="nameOfFilter">Nicotine</h4>
+                                    <div class="row">
+                                        <div class="col-md-3 funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="nicotine" id="0" checked/>
+                                                <label for="0">0</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="nicotine" id="1"/>
+                                                <label for="1">1</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="nicotine" id="3"/>
+                                                <label for="3">3</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="radio" name="nicotine" id="6"/>
+                                                <label for="6">6</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h5 class="totalcost">Total cost: $15.15</h5>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="submit" name="selfliquid-add-to-cart" id="selfliquid-add-to-cart" tabindex="4" class="form-control btn btn-selfliquid-add-to-cart" value="Add to cart">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="submit" name="selfliquid-buy" id="selfliquid-buy" tabindex="4" class="form-control btn btn-selfliquid-buy" value="Buy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <a href="cart.html"><img src="../../img/cart.png" alt="cart" class="cart"></a>
+            </div>
+            <div class="col-sm-1">
+                <a href="#" data-toggle="modal" data-target="#login-modal"><img src="../../img/user.png" alt="person" class="person"></a>
+                <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="panel panel-login">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <a href="#" class="active" id="login-form-link">Login</a>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <a href="#" id="register-form-link">Register</a>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="arrow-down"></div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <form id="login-form"  method="post" role="form" style="display: block;">
+                                                        <div class="form-group">
+                                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="User name" value="" required>
+                                                            <span id="error_logname" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
+                                                            <span id="error_logpass" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="text-center">
+                                                                        <a href="#" tabindex="5" class="forgot-password">Forgot Password?</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <form id="register-form" action="" method="post" role="form" style="display: none;">
+                                                        <div class="form-group">
+                                                            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
+                                                            <span id="error_mail" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" name="tel" id="tel" tabindex="1" class="form-control" placeholder="Phone Number" value="" required>
+                                                            <span id="error_phone" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" name="password" id="password-reg" tabindex="2" class="form-control" placeholder="Password" required>
+                                                            <span id="error_pass" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required>
+                                                            <span id="error_confpass" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="headerMenu">
+    <div class="container headerMenu">
+        <div class="row">
+            <div class="col-sm-9">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="comleteKitsGallery.html">Complete kits</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tanks</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">RDA</a>
+                            <a class="dropdown-item" href="#">RDTA</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mods</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">BoxMod</a>
+                            <a class="dropdown-item" href="#">MechMod</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">E-liquid</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Premium</a>
+                            <a class="dropdown-item" href="#">Simple</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accessories</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Atomizer</a>
+                            <a class="dropdown-item" href="#">Battery</a>
+                            <a class="dropdown-item" href="#">Cotton</a>
+                            <a class="dropdown-item" href="#">Coil</a>
+                            <a class="dropdown-item" href="#">Case</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Recipes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <form class="search form-inline" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><img src="../../img/search.png" alt="search"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="content">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="mainPage.html"><img src="../../img/home.png" alt="home"></a></li>
+                <li><a href="comleteKitsGallery.html">Box Mods</a></li>
+                <li class="active">Eleaf iStick QC 200W</li>
+            </ul>
+            <div class="row">
+                <div class="preview col-sm-5">
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="../../img/kits/eleaf-ijust-s-silver.jpg" /></div>
+                        <div class="tab-pane" id="pic-2"><img src="../../img/kits/vape-kits-kanger-dripbox-160w-tc-kit-1_1024x1024.jpg" /></div>
+                        <div class="tab-pane" id="pic-3"><img src="../../img/kits/picomelo0.jpg" /></div>
+                        <div class="tab-pane" id="pic-4"><img src="../../img/kits/ijusts_new.jpg" /></div>
+                        <div class="tab-pane" id="pic-5"><img src="../../img/kits/kanger-top-evod.jpg" /></div>
+                    </div>
+                    <ul class="preview-thumbnail nav nav-tabs">
+                        <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../../img/kits/eleaf-ijust-s-silver.jpg" /></a></li>
+                        <li><a data-target="#pic-2" data-toggle="tab"><img src="../../img/kits/vape-kits-kanger-dripbox-160w-tc-kit-1_1024x1024.jpg" /></a></li>
+                        <li><a data-target="#pic-3" data-toggle="tab"><img src="../../img/kits/picomelo0.jpg" /></a></li>
+                        <li><a data-target="#pic-4" data-toggle="tab"><img src="../../img/kits/ijusts_new.jpg" /></a></li>
+                        <li><a data-target="#pic-5" data-toggle="tab"><img src="../../img/kits/kanger-top-evod.jpg" /></a></li>
+                    </ul>
+                </div>
+                <div class="info col-sm-7">
+                    <h2 class="productName"><b>Eleaf iStick QC 200W</b></h2>
+                    <h3>
+                        <span class="price">$49.95</span>
+                        <span class="oldPrice">$56.95</span>
+                    </h3>
+                    <p class="brand"><b>Brand:</b> Eleaf</p>
+                    <p class="battery"><b>Battery capacity:</b> 5000mAh</p>
+                    <p class="wattage"><b>Output wattage:</b> 1-200W</p>
+                    <p class="thread"><b>Thread type:</b> 510</p>
+                    <p class="country"><b>Country:</b> China</p>
+                    <p class="description">Eleaf has added another formidable internal battery vape MOD to their arsenal of
+                        vaporizers with the Eleaf iStick 200W QC Vape MOD. This powerful vape MOD
+                        offers impressive output and consistency for a most reliable experience. </p>
+                    <p class="colors">
+                        <b>Colors: </b>
+                        <span class="color black"><input type="radio" name="color" id="black"></span>
+                        <span class="color red"><input type="radio" name="color" id="red"></span>
+                        <span class="color silver"><input type="radio" name="color" id="silver"></span>
+                        <span class="color brown"><input type="radio" name="color" id="brown"></span>
+                        <span class="color green"><input type="radio" name="color" id="green"></span>
+                    </p>
+                    <p class="quantity">
+                        <b>Quantity: </b>
+                        <span class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                                    -
+                                </button>
+                            </span>
+                            <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                                    +
+                                </button>
+                            </span>
+                        </span>
+                    </p>
+                    <input type="submit" class="btn btn-add-to-cart" value="Add to cart">
+                    <input type="submit" class="btn btn-buy" value="Buy now">
+                </div>
+            </div>
+            <h3 class="alsoPurchased"><b>Also purchased</b></h3>
+            <hr>
+            <div class="arrow-down"></div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img src="../../img/kits/kanger-top-evod.jpg" class="img-responsive" alt="a" />
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price">
+                                    <h5>Sample Product</h5>
+                                    <h5 class="price-text-color">$199.99</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p class="btn-add">
+                                    <a href="" class="hidden-sm">Add to cart</a>
+                                </p>
+                                <p class="btn-details">
+                                    <a href="" class="hidden-sm">More details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img src="../../img/e-liquids/raffaello-cocktail.png" class="img-responsive" alt="a" />
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price">
+                                    <h5>Sample Product</h5>
+                                    <h5 class="price-text-color">$199.99</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p class="btn-add">
+                                    <a href="" class="hidden-sm">Add to cart</a>
+                                </p>
+                                <p class="btn-details">
+                                    <a href="" class="hidden-sm">More details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img src="../../img/accessories/4f1c5b7c9af41b953df5b49d6c40ee65.jpg" class="img-responsive" alt="a" />
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price">
+                                    <h5>Sample Product</h5>
+                                    <h5 class="price-text-color">$199.99</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p class="btn-add">
+                                    <a href="" class="hidden-sm">Add to cart</a>
+                                </p>
+                                <p class="btn-details">
+                                    <a href="" class="hidden-sm">More details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img src="../../img/mods/wrx3001.jpg" class="img-responsive" alt="a" />
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price">
+                                    <h5>Sample Product</h5>
+                                    <h5 class="price-text-color">$199.99</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p class="btn-add">
+                                    <a href="" class="hidden-sm">Add to cart</a>
+                                </p>
+                                <p class="btn-details">
+                                    <a href="" class="hidden-sm">More details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container footer">
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="footerHead">WARNING</p>
+                    <p>Please keep our products out of reach of children. Our products are only intended for committed smokers of
+                        legal smoking age and not recommended for use by young people, non-smokers, pregnant or breast-feeding women,
+                        or persons who are allergic or sensitive to nicotine as our products may be hazardous to health and contain
+                        nicotine which is addictive.</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="footerHead">CONTACT INFORMATION</p>
+                    <p>Address: Ukraine, Chernivtsi, Holovna str.</p>
+                    <p>Email: vapeOn@gmail.com</p>
+                    <p>Telephone: +380508888888</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="footerHead">CONNECT WITH US</p>
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&#169;Blockers2017</p>
+        </div>
+    </section>
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/productPage.js"></script>
+    <script src="../../js/cart.js"></script>
+</body>
+</html>

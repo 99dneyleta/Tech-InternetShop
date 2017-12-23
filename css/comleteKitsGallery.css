@@ -1,0 +1,59 @@
+.brandForm .form-group{
+    border-bottom: 1px solid #bbb;
+    margin: 2%;
+}
+
+.nameOfFilter{
+    text-align: center;
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #737373;
+}
+.checkbox input {
+    display: none;
+}
+
+.brandForm .form-group:last-child{
+    margin-bottom: 7%;
+}
+
+.col-item{
+    margin-top: 10%;
+}
+
+.pagination{
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.pagination li{
+    padding: 1% 1.5%;
+    line-height: 1;
+    margin-left: 1%;
+}
+
+.pagination li.active{
+    border: 1px solid #737373;
+    background-color: #565656;
+
+}
+
+.pagination li.active a{
+    color: white;
+}
+
+.nameOfGalery, .sortBy{
+    display: inline;
+}
+
+.sortBy {
+    float: right;
+    border: 1px solid #ddd;
+    padding: 0.5%;
+}
