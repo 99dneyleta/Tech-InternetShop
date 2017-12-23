@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@main');
+Route::get('admin\Users', 'AdminPagesController@DisplayUsers');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
